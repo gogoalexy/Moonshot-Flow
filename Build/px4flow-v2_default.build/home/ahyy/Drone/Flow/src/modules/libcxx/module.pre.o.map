@@ -1,0 +1,666 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD libstubs.cpp.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT_NONE(.init))
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x0000000000000000        0x0
+ *(.text .stub)
+ .text          0x0000000000000000        0x0 libstubs.cpp.o
+ *(.gnu.warning)
+
+.text._Znwj     0x0000000000000000        0x4
+ .text._Znwj    0x0000000000000000        0x4 libstubs.cpp.o
+                0x0000000000000000                operator new(unsigned int)
+
+.text._Znaj     0x0000000000000000        0x4
+ .text._Znaj    0x0000000000000000        0x4 libstubs.cpp.o
+                0x0000000000000000                operator new[](unsigned int)
+
+.text._ZdlPv    0x0000000000000000        0x4
+ .text._ZdlPv   0x0000000000000000        0x4 libstubs.cpp.o
+                0x0000000000000000                operator delete(void*)
+
+.text._ZdaPv    0x0000000000000000        0x4
+ .text._ZdaPv   0x0000000000000000        0x4 libstubs.cpp.o
+                0x0000000000000000                operator delete[](void*)
+
+.text._ZN9__gnu_cxx27__verbose_terminate_handlerEv
+                0x0000000000000000        0x4
+ .text._ZN9__gnu_cxx27__verbose_terminate_handlerEv
+                0x0000000000000000        0x4 libstubs.cpp.o
+                0x0000000000000000                __gnu_cxx::__verbose_terminate_handler()
+
+.text.__aeabi_atexit
+                0x0000000000000000        0x4
+ .text.__aeabi_atexit
+                0x0000000000000000        0x4 libstubs.cpp.o
+                0x0000000000000000                __aeabi_atexit
+
+.text.__cxa_atexit
+                0x0000000000000000        0x4
+ .text.__cxa_atexit
+                0x0000000000000000        0x4 libstubs.cpp.o
+                0x0000000000000000                __cxa_atexit
+
+.text.__cxa_guard_acquire
+                0x0000000000000000       0x10
+ .text.__cxa_guard_acquire
+                0x0000000000000000       0x10 libstubs.cpp.o
+                0x0000000000000000                __cxa_guard_acquire
+
+.text.__cxa_guard_release
+                0x0000000000000000        0xc
+ .text.__cxa_guard_release
+                0x0000000000000000        0xc libstubs.cpp.o
+                0x0000000000000000                __cxa_guard_release
+
+.text.__cxa_guard_abort
+                0x0000000000000000        0x4
+ .text.__cxa_guard_abort
+                0x0000000000000000        0x4 libstubs.cpp.o
+                0x0000000000000000                __cxa_guard_abort
+
+.text.__cxa_pure_virtual
+                0x0000000000000000        0x4
+ .text.__cxa_pure_virtual
+                0x0000000000000000        0x4 libstubs.cpp.o
+                0x0000000000000000                __cxa_pure_virtual
+
+.text.abort     0x0000000000000000        0x4
+ .text.abort    0x0000000000000000        0x4 libstubs.cpp.o
+                0x0000000000000000                abort
+
+.text._read_r   0x0000000000000000        0x8
+ .text._read_r  0x0000000000000000        0x8 libstubs.cpp.o
+                0x0000000000000000                _read_r
+
+.text._lseek_r  0x0000000000000000        0x8
+ .text._lseek_r
+                0x0000000000000000        0x8 libstubs.cpp.o
+                0x0000000000000000                _lseek_r
+
+.text._write_r  0x0000000000000000        0x8
+ .text._write_r
+                0x0000000000000000        0x8 libstubs.cpp.o
+                0x0000000000000000                _write_r
+
+.text._close_r  0x0000000000000000        0x8
+ .text._close_r
+                0x0000000000000000        0x8 libstubs.cpp.o
+                0x0000000000000000                _close_r
+
+.text._sbrk_r   0x0000000000000000        0x4
+ .text._sbrk_r  0x0000000000000000        0x4 libstubs.cpp.o
+                0x0000000000000000                _sbrk_r
+
+.text._fstat_r  0x0000000000000000        0x8
+ .text._fstat_r
+                0x0000000000000000        0x8 libstubs.cpp.o
+                0x0000000000000000                _fstat_r
+
+.text._isatty_r
+                0x0000000000000000        0x8
+ .text._isatty_r
+                0x0000000000000000        0x8 libstubs.cpp.o
+                0x0000000000000000                _isatty_r
+
+.text._exit     0x0000000000000000        0x4
+ .text._exit    0x0000000000000000        0x4 libstubs.cpp.o
+                0x0000000000000000                _exit
+
+.text._getpid   0x0000000000000000        0x4
+ .text._getpid  0x0000000000000000        0x4 libstubs.cpp.o
+                0x0000000000000000                _getpid
+
+.text._kill     0x0000000000000000        0x4
+ .text._kill    0x0000000000000000        0x4 libstubs.cpp.o
+                0x0000000000000000                _kill
+
+.fini
+ *(SORT_NONE(.fini))
+
+.rodata
+ *(.rodata)
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x0000000000000000        0x0
+ *(.data)
+ .data          0x0000000000000000        0x0 libstubs.cpp.o
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000        0x0
+ *(.bss)
+ .bss           0x0000000000000000        0x0 libstubs.cpp.o
+ *(COMMON)
+
+.bss.__dso_handle
+                0x0000000000000000        0x4
+ .bss.__dso_handle
+                0x0000000000000000        0x4 libstubs.cpp.o
+                0x0000000000000000                __dso_handle
+
+.stack
+ *(.stack)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x7f
+ *(.comment)
+ .comment       0x0000000000000000       0x7f libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc libstubs.cpp.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000       0xb8
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0xb8 libstubs.cpp.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0x1173
+ *(.debug_info)
+ .debug_info    0x0000000000000000     0x1173 libstubs.cpp.o
+
+.debug_abbrev   0x0000000000000000      0x3d6
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0x3d6 libstubs.cpp.o
+
+.debug_line     0x0000000000000000      0x5bd
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000      0x5bd libstubs.cpp.o
+
+.debug_frame    0x0000000000000000      0x170
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000      0x170 libstubs.cpp.o
+
+.debug_str      0x0000000000000000     0x9ddc
+ *(.debug_str)
+ .debug_str     0x0000000000000000     0x9ddc libstubs.cpp.o
+
+.debug_loc      0x0000000000000000       0x21
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000       0x21 libstubs.cpp.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000       0xa8
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000       0xa8 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000      0x1f3
+ *(.debug_macro)
+ .debug_macro   0x0000000000000000      0x1f3 libstubs.cpp.o
+
+.debug_addr
+ *(.debug_addr)
+
+.ARM.attributes
+                0x0000000000000000       0x35
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x0000000000000000       0x35 libstubs.cpp.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(/home/ahyy/Drone/Flow/Build/px4flow-v2_default.build//home/ahyy/Drone/Flow/src/modules/libcxx/module.pre.o elf32-littlearm)
+
+.debug_macro    0x0000000000000000      0xb14
+ .debug_macro   0x0000000000000000      0xb14 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x22
+ .debug_macro   0x0000000000000000       0x22 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000      0x168
+ .debug_macro   0x0000000000000000      0x168 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x10
+ .debug_macro   0x0000000000000000       0x10 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000      0x3f4
+ .debug_macro   0x0000000000000000      0x3f4 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x10
+ .debug_macro   0x0000000000000000       0x10 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x17
+ .debug_macro   0x0000000000000000       0x17 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x22
+ .debug_macro   0x0000000000000000       0x22 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x52
+ .debug_macro   0x0000000000000000       0x52 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x8d
+ .debug_macro   0x0000000000000000       0x8d libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x2e
+ .debug_macro   0x0000000000000000       0x2e libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x9c
+ .debug_macro   0x0000000000000000       0x9c libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x16
+ .debug_macro   0x0000000000000000       0x16 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000      0x10e
+ .debug_macro   0x0000000000000000      0x10e libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x94
+ .debug_macro   0x0000000000000000       0x94 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x57
+ .debug_macro   0x0000000000000000       0x57 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x58
+ .debug_macro   0x0000000000000000       0x58 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x1f
+ .debug_macro   0x0000000000000000       0x1f libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x43
+ .debug_macro   0x0000000000000000       0x43 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x20
+ .debug_macro   0x0000000000000000       0x20 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000      0x18e
+ .debug_macro   0x0000000000000000      0x18e libstubs.cpp.o
+
+.debug_macro    0x0000000000000000      0x353
+ .debug_macro   0x0000000000000000      0x353 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x16
+ .debug_macro   0x0000000000000000       0x16 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x29
+ .debug_macro   0x0000000000000000       0x29 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x1c
+ .debug_macro   0x0000000000000000       0x1c libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0xde
+ .debug_macro   0x0000000000000000       0xde libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x16
+ .debug_macro   0x0000000000000000       0x16 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x10
+ .debug_macro   0x0000000000000000       0x10 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x35
+ .debug_macro   0x0000000000000000       0x35 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x6a
+ .debug_macro   0x0000000000000000       0x6a libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x1c
+ .debug_macro   0x0000000000000000       0x1c libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x52
+ .debug_macro   0x0000000000000000       0x52 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x40
+ .debug_macro   0x0000000000000000       0x40 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x10
+ .debug_macro   0x0000000000000000       0x10 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x40
+ .debug_macro   0x0000000000000000       0x40 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0xd7
+ .debug_macro   0x0000000000000000       0xd7 libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x1c
+ .debug_macro   0x0000000000000000       0x1c libstubs.cpp.o
+
+.debug_macro    0x0000000000000000       0x3d
+ .debug_macro   0x0000000000000000       0x3d libstubs.cpp.o
+
+.debug_macro    0x0000000000000000      0x51a
+ .debug_macro   0x0000000000000000      0x51a libstubs.cpp.o

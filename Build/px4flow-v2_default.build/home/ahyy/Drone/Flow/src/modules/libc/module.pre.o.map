@@ -1,0 +1,1842 @@
+
+Discarded input sections
+
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000      0xa6c string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x52 string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x17 string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x8d string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x2e string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x9c string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x57 string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000      0x16d string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000      0x353 string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x58 string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x1f string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x43 string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x20 string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x6a string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x52 string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x40 string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x40 string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0xd7 string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_strncmp.c.o
+ .debug_macro   0x0000000000000000       0x3d string/lib_strncmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strcmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strcmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strcmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strcmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strcmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strcmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strcmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strcmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strcmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strcmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strcmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strcmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strcmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strcmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strcmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strcmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strcmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strcmp.c.o
+ .group         0x0000000000000000        0xc string/lib_strcmp.c.o
+ .debug_macro   0x0000000000000000      0xa6c string/lib_strcmp.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_strcmp.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_strcmp.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_strcmp.c.o
+ .debug_macro   0x0000000000000000       0x52 string/lib_strcmp.c.o
+ .debug_macro   0x0000000000000000       0x17 string/lib_strcmp.c.o
+ .debug_macro   0x0000000000000000       0x8d string/lib_strcmp.c.o
+ .debug_macro   0x0000000000000000       0x2e string/lib_strcmp.c.o
+ .debug_macro   0x0000000000000000       0x9c string/lib_strcmp.c.o
+ .debug_macro   0x0000000000000000      0x16d string/lib_strcmp.c.o
+ .debug_macro   0x0000000000000000       0x57 string/lib_strcmp.c.o
+ .debug_macro   0x0000000000000000       0x58 string/lib_strcmp.c.o
+ .debug_macro   0x0000000000000000       0x1f string/lib_strcmp.c.o
+ .debug_macro   0x0000000000000000       0x43 string/lib_strcmp.c.o
+ .debug_macro   0x0000000000000000       0x20 string/lib_strcmp.c.o
+ .debug_macro   0x0000000000000000      0x18e string/lib_strcmp.c.o
+ .debug_macro   0x0000000000000000      0x353 string/lib_strcmp.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_strcmp.c.o
+ .debug_macro   0x0000000000000000       0x35 string/lib_strcmp.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000      0xa6c string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x52 string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x17 string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x8d string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x2e string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x9c string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x57 string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000      0x16d string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000      0x353 string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x58 string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x1f string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x43 string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x20 string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x6a string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x52 string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x40 string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x40 string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0xd7 string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x3d string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000      0x18e string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_memcpy.c.o
+ .debug_macro   0x0000000000000000       0x35 string/lib_memcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+ .debug_macro   0x0000000000000000      0xa6c string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x52 string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x17 string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x8d string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x2e string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x9c string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x57 string/lib_memset.c.o
+ .debug_macro   0x0000000000000000      0x16d string/lib_memset.c.o
+ .debug_macro   0x0000000000000000      0x353 string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x58 string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x1f string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x43 string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x20 string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x6a string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x52 string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x40 string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x40 string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0xd7 string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x3d string/lib_memset.c.o
+ .debug_macro   0x0000000000000000      0x18e string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_memset.c.o
+ .debug_macro   0x0000000000000000       0x35 string/lib_memset.c.o
+ .group         0x0000000000000000        0xc string/lib_strcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strcpy.c.o
+ .debug_macro   0x0000000000000000      0xa6c string/lib_strcpy.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_strcpy.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_strcpy.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_strcpy.c.o
+ .debug_macro   0x0000000000000000       0x52 string/lib_strcpy.c.o
+ .debug_macro   0x0000000000000000       0x17 string/lib_strcpy.c.o
+ .debug_macro   0x0000000000000000       0x8d string/lib_strcpy.c.o
+ .debug_macro   0x0000000000000000       0x2e string/lib_strcpy.c.o
+ .debug_macro   0x0000000000000000       0x9c string/lib_strcpy.c.o
+ .debug_macro   0x0000000000000000      0x16d string/lib_strcpy.c.o
+ .debug_macro   0x0000000000000000       0x57 string/lib_strcpy.c.o
+ .debug_macro   0x0000000000000000       0x58 string/lib_strcpy.c.o
+ .debug_macro   0x0000000000000000       0x1f string/lib_strcpy.c.o
+ .debug_macro   0x0000000000000000       0x43 string/lib_strcpy.c.o
+ .debug_macro   0x0000000000000000       0x20 string/lib_strcpy.c.o
+ .debug_macro   0x0000000000000000      0x18e string/lib_strcpy.c.o
+ .debug_macro   0x0000000000000000      0x353 string/lib_strcpy.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_strcpy.c.o
+ .debug_macro   0x0000000000000000       0x35 string/lib_strcpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000      0xa6c string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x52 string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x17 string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x8d string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x2e string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x9c string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x57 string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000      0x16d string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000      0x353 string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x58 string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x1f string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x43 string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x20 string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x6a string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x52 string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x40 string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x40 string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0xd7 string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x3d string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000      0x18e string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_strncpy.c.o
+ .debug_macro   0x0000000000000000       0x35 string/lib_strncpy.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000      0xa6c string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x52 string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x17 string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x8d string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x2e string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x9c string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x57 string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000      0x16d string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000      0x353 string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x58 string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x1f string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x43 string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x20 string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x6a string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x52 string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x40 string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x40 string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0xd7 string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x3d string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000      0x18e string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_strlen.c.o
+ .debug_macro   0x0000000000000000       0x35 string/lib_strlen.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000      0xa6c string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x52 string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x17 string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x8d string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x2e string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x9c string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x57 string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000      0x16d string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000      0x353 string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x58 string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x1f string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x43 string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x20 string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x6a string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x52 string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x40 string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x40 string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0xd7 string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x3d string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000      0x18e string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_strncat.c.o
+ .debug_macro   0x0000000000000000       0x35 string/lib_strncat.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000      0xa6c string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x52 string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x17 string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x8d string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x2e string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x9c string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000      0x16d string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x57 string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x58 string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x1f string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x43 string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x20 string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000      0x18e string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000      0x353 string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x35 string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x6a string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x52 string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x40 string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x40 string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0xd7 string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000000       0x3d string/lib_skipspace.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000      0xa6c string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x22 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x52 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x17 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x8d string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x2e string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x9c string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000      0x16d string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x57 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x58 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x1f string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x43 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x20 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000      0x18e string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000      0x353 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x35 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x6a string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x52 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x40 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x40 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0xd7 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x3d string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x10 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x16 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000      0x16f string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x2b string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000      0x118 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x1c string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x16 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x16 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x29 string/lib_isbasedigit.c.o
+ .debug_macro   0x0000000000000000       0x4f string/lib_isbasedigit.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000      0xa6c stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x22 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x22 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x52 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x17 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x8d stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x2e stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x9c stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x57 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000      0x353 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x10 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x58 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x1f stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x43 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x20 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000      0x18e stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x10 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x6a stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x1c stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x52 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x40 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x10 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x40 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0xd7 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x1c stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x3d stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x16 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000      0x16f stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x1c stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x22 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0xef stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000      0x1df stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x2b stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000      0x118 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x1c stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x16 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x35 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x16 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x29 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000000000       0x4f stdio/lib_printf.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000      0xa6c stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x22 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x1c stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x22 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x17 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x22 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x52 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x8d stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x2e stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x9c stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x16 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x57 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x58 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x1f stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x43 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x20 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000      0x18e stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000      0x353 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x16 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x29 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x10 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x6a stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x1c stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x52 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x40 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x10 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x40 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0xd7 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x1c stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x3d stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x1c stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x35 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x10 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x10 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x16 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000      0x16f stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000       0x2b stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000000000      0x118 stdlib/lib_strtol.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000      0xa6c stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x22 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x1c stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x17 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x22 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x52 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x8d stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x2e stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x9c stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x16 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000      0x10e stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x86 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x57 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x58 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x1f stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x43 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x20 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000      0x18e stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000      0x353 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x16 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x29 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x10 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x6a stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x1c stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x52 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x40 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x10 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x40 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0xd7 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x1c stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x3d stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x22 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x1c stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x35 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x10 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x10 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x16 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000      0x16f stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x2b stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000      0x118 stdlib/lib_strtoul.c.o
+ .debug_macro   0x0000000000000000       0x67 stdlib/lib_strtoul.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .group         0x0000000000000000        0xc stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000      0xa6c stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x22 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x1c stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x22 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x52 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x17 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x8d stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x2e stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x9c stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000      0x16d stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x57 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x58 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x1f stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x43 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x20 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000      0x18e stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000      0x353 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x10 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x35 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000      0x111 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x10 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x6a stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x1c stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x52 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x40 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x10 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x40 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0xd7 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x1c stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x3d stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x22 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x1c stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x10 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x10 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x16 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000      0x16f stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x2b stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000      0x118 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x1c stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x16 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x16 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x29 stdlib/lib_checkbase.c.o
+ .debug_macro   0x0000000000000000       0x4f stdlib/lib_checkbase.c.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD init.c.o
+LOAD string/lib_strncmp.c.o
+LOAD string/lib_strcmp.c.o
+LOAD string/lib_memcpy.c.o
+LOAD string/lib_memset.c.o
+LOAD string/lib_strcpy.c.o
+LOAD string/lib_strncpy.c.o
+LOAD string/lib_strlen.c.o
+LOAD string/lib_strncat.c.o
+LOAD string/lib_skipspace.c.o
+LOAD string/lib_isbasedigit.c.o
+LOAD stdio/lib_printf.c.o
+LOAD stdlib/lib_strtol.c.o
+LOAD stdlib/lib_strtoul.c.o
+LOAD stdlib/lib_checkbase.c.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT_NONE(.init))
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x0000000000000000        0x0
+ *(.text .stub)
+ .text          0x0000000000000000        0x0 init.c.o
+ .text          0x0000000000000000        0x0 string/lib_strncmp.c.o
+ .text          0x0000000000000000        0x0 string/lib_strcmp.c.o
+ .text          0x0000000000000000        0x0 string/lib_memcpy.c.o
+ .text          0x0000000000000000        0x0 string/lib_memset.c.o
+ .text          0x0000000000000000        0x0 string/lib_strcpy.c.o
+ .text          0x0000000000000000        0x0 string/lib_strncpy.c.o
+ .text          0x0000000000000000        0x0 string/lib_strlen.c.o
+ .text          0x0000000000000000        0x0 string/lib_strncat.c.o
+ .text          0x0000000000000000        0x0 string/lib_skipspace.c.o
+ .text          0x0000000000000000        0x0 string/lib_isbasedigit.c.o
+ .text          0x0000000000000000        0x0 stdio/lib_printf.c.o
+ .text          0x0000000000000000        0x0 stdlib/lib_strtol.c.o
+ .text          0x0000000000000000        0x0 stdlib/lib_strtoul.c.o
+ .text          0x0000000000000000        0x0 stdlib/lib_checkbase.c.o
+ *(.gnu.warning)
+
+.text._init     0x0000000000000000        0x4
+ .text._init    0x0000000000000000        0x4 init.c.o
+                0x0000000000000000                _init
+
+.text.__libc_init_array
+                0x0000000000000000       0x44
+ .text.__libc_init_array
+                0x0000000000000000       0x44 init.c.o
+                0x0000000000000000                __libc_init_array
+
+.text.__libc_fini_array
+                0x0000000000000000       0x34
+ .text.__libc_fini_array
+                0x0000000000000000       0x34 init.c.o
+                0x0000000000000000                __libc_fini_array
+
+.text.strncmp   0x0000000000000000       0x3c
+ .text.strncmp  0x0000000000000000       0x3c string/lib_strncmp.c.o
+                0x0000000000000000                strncmp
+
+.text.strcmp    0x0000000000000000       0x1c
+ .text.strcmp   0x0000000000000000       0x1c string/lib_strcmp.c.o
+                0x0000000000000000                strcmp
+
+.text.memcpy    0x0000000000000000       0xd4
+ .text.memcpy   0x0000000000000000       0xd4 string/lib_memcpy.c.o
+                0x0000000000000000                memcpy
+
+.text.memset    0x0000000000000000       0x84
+ .text.memset   0x0000000000000000       0x84 string/lib_memset.c.o
+                0x0000000000000000                memset
+
+.text.strcpy    0x0000000000000000       0x10
+ .text.strcpy   0x0000000000000000       0x10 string/lib_strcpy.c.o
+                0x0000000000000000                strcpy
+
+.text.strncpy   0x0000000000000000       0x38
+ .text.strncpy  0x0000000000000000       0x38 string/lib_strncpy.c.o
+                0x0000000000000000                strncpy
+
+.text.strlen    0x0000000000000000       0x18
+ .text.strlen   0x0000000000000000       0x18 string/lib_strlen.c.o
+                0x0000000000000000                strlen
+
+.text.strncat   0x0000000000000000       0x30
+ .text.strncat  0x0000000000000000       0x30 string/lib_strncat.c.o
+                0x0000000000000000                strncat
+
+.text.lib_skipspace
+                0x0000000000000000       0x20
+ .text.lib_skipspace
+                0x0000000000000000       0x20 string/lib_skipspace.c.o
+                0x0000000000000000                lib_skipspace
+
+.text.lib_isbasedigit
+                0x0000000000000000       0x50
+ .text.lib_isbasedigit
+                0x0000000000000000       0x50 string/lib_isbasedigit.c.o
+                0x0000000000000000                lib_isbasedigit
+
+.text.printf    0x0000000000000000       0x10
+ .text.printf   0x0000000000000000       0x10 stdio/lib_printf.c.o
+                0x0000000000000000                printf
+
+.text.strtol    0x0000000000000000       0x50
+ .text.strtol   0x0000000000000000       0x50 stdlib/lib_strtol.c.o
+                0x0000000000000000                strtol
+
+.text.strtoul   0x0000000000000000       0x50
+ .text.strtoul  0x0000000000000000       0x50 stdlib/lib_strtoul.c.o
+                0x0000000000000000                strtoul
+
+.text.lib_checkbase
+                0x0000000000000000       0x58
+ .text.lib_checkbase
+                0x0000000000000000       0x58 stdlib/lib_checkbase.c.o
+                0x0000000000000000                lib_checkbase
+
+.fini
+ *(SORT_NONE(.fini))
+
+.rodata
+ *(.rodata)
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x0000000000000000        0x0
+ *(.data)
+ .data          0x0000000000000000        0x0 init.c.o
+ .data          0x0000000000000000        0x0 string/lib_strncmp.c.o
+ .data          0x0000000000000000        0x0 string/lib_strcmp.c.o
+ .data          0x0000000000000000        0x0 string/lib_memcpy.c.o
+ .data          0x0000000000000000        0x0 string/lib_memset.c.o
+ .data          0x0000000000000000        0x0 string/lib_strcpy.c.o
+ .data          0x0000000000000000        0x0 string/lib_strncpy.c.o
+ .data          0x0000000000000000        0x0 string/lib_strlen.c.o
+ .data          0x0000000000000000        0x0 string/lib_strncat.c.o
+ .data          0x0000000000000000        0x0 string/lib_skipspace.c.o
+ .data          0x0000000000000000        0x0 string/lib_isbasedigit.c.o
+ .data          0x0000000000000000        0x0 stdio/lib_printf.c.o
+ .data          0x0000000000000000        0x0 stdlib/lib_strtol.c.o
+ .data          0x0000000000000000        0x0 stdlib/lib_strtoul.c.o
+ .data          0x0000000000000000        0x0 stdlib/lib_checkbase.c.o
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000        0x0
+ *(.bss)
+ .bss           0x0000000000000000        0x0 init.c.o
+ .bss           0x0000000000000000        0x0 string/lib_strncmp.c.o
+ .bss           0x0000000000000000        0x0 string/lib_strcmp.c.o
+ .bss           0x0000000000000000        0x0 string/lib_memcpy.c.o
+ .bss           0x0000000000000000        0x0 string/lib_memset.c.o
+ .bss           0x0000000000000000        0x0 string/lib_strcpy.c.o
+ .bss           0x0000000000000000        0x0 string/lib_strncpy.c.o
+ .bss           0x0000000000000000        0x0 string/lib_strlen.c.o
+ .bss           0x0000000000000000        0x0 string/lib_strncat.c.o
+ .bss           0x0000000000000000        0x0 string/lib_skipspace.c.o
+ .bss           0x0000000000000000        0x0 string/lib_isbasedigit.c.o
+ .bss           0x0000000000000000        0x0 stdio/lib_printf.c.o
+ .bss           0x0000000000000000        0x0 stdlib/lib_strtol.c.o
+ .bss           0x0000000000000000        0x0 stdlib/lib_strtoul.c.o
+ .bss           0x0000000000000000        0x0 stdlib/lib_checkbase.c.o
+ *(COMMON)
+
+.stack
+ *(.stack)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000      0x771
+ *(.comment)
+ .comment       0x0000000000000000       0x7f init.c.o
+ .comment       0x000000000000007f       0x7f string/lib_strncmp.c.o
+ .comment       0x00000000000000fe       0x7f string/lib_strcmp.c.o
+ .comment       0x000000000000017d       0x7f string/lib_memcpy.c.o
+ .comment       0x00000000000001fc       0x7f string/lib_memset.c.o
+ .comment       0x000000000000027b       0x7f string/lib_strcpy.c.o
+ .comment       0x00000000000002fa       0x7f string/lib_strncpy.c.o
+ .comment       0x0000000000000379       0x7f string/lib_strlen.c.o
+ .comment       0x00000000000003f8       0x7f string/lib_strncat.c.o
+ .comment       0x0000000000000477       0x7f string/lib_skipspace.c.o
+ .comment       0x00000000000004f6       0x7f string/lib_isbasedigit.c.o
+ .comment       0x0000000000000575       0x7f stdio/lib_printf.c.o
+ .comment       0x00000000000005f4       0x7f stdlib/lib_strtol.c.o
+ .comment       0x0000000000000673       0x7f stdlib/lib_strtoul.c.o
+ .comment       0x00000000000006f2       0x7f stdlib/lib_checkbase.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc init.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_strncmp.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_memset.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_skipspace.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc string/lib_isbasedigit.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc stdio/lib_printf.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc stdlib/lib_strtol.c.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000      0x1f0
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x30 init.c.o
+ .debug_aranges
+                0x0000000000000030       0x20 string/lib_strncmp.c.o
+ .debug_aranges
+                0x0000000000000050       0x20 string/lib_strcmp.c.o
+ .debug_aranges
+                0x0000000000000070       0x20 string/lib_memcpy.c.o
+ .debug_aranges
+                0x0000000000000090       0x20 string/lib_memset.c.o
+ .debug_aranges
+                0x00000000000000b0       0x20 string/lib_strcpy.c.o
+ .debug_aranges
+                0x00000000000000d0       0x20 string/lib_strncpy.c.o
+ .debug_aranges
+                0x00000000000000f0       0x20 string/lib_strlen.c.o
+ .debug_aranges
+                0x0000000000000110       0x20 string/lib_strncat.c.o
+ .debug_aranges
+                0x0000000000000130       0x20 string/lib_skipspace.c.o
+ .debug_aranges
+                0x0000000000000150       0x20 string/lib_isbasedigit.c.o
+ .debug_aranges
+                0x0000000000000170       0x20 stdio/lib_printf.c.o
+ .debug_aranges
+                0x0000000000000190       0x20 stdlib/lib_strtol.c.o
+ .debug_aranges
+                0x00000000000001b0       0x20 stdlib/lib_strtoul.c.o
+ .debug_aranges
+                0x00000000000001d0       0x20 stdlib/lib_checkbase.c.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0x80b7
+ *(.debug_info)
+ .debug_info    0x0000000000000000      0x165 init.c.o
+ .debug_info    0x0000000000000165      0x8ec string/lib_strncmp.c.o
+ .debug_info    0x0000000000000a51      0x8d3 string/lib_strcmp.c.o
+ .debug_info    0x0000000000001324      0x905 string/lib_memcpy.c.o
+ .debug_info    0x0000000000001c29      0x989 string/lib_memset.c.o
+ .debug_info    0x00000000000025b2      0x8d3 string/lib_strcpy.c.o
+ .debug_info    0x0000000000002e85      0x91e string/lib_strncpy.c.o
+ .debug_info    0x00000000000037a3      0x8ce string/lib_strlen.c.o
+ .debug_info    0x0000000000004071      0x90c string/lib_strncat.c.o
+ .debug_info    0x000000000000497d      0x8d5 string/lib_skipspace.c.o
+ .debug_info    0x0000000000005252      0x927 string/lib_isbasedigit.c.o
+ .debug_info    0x0000000000005b79      0x929 stdio/lib_printf.c.o
+ .debug_info    0x00000000000064a2      0x983 stdlib/lib_strtol.c.o
+ .debug_info    0x0000000000006e25      0x96c stdlib/lib_strtoul.c.o
+ .debug_info    0x0000000000007791      0x926 stdlib/lib_checkbase.c.o
+
+.debug_abbrev   0x0000000000000000     0x1b1d
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0xe1 init.c.o
+ .debug_abbrev  0x00000000000000e1      0x1b9 string/lib_strncmp.c.o
+ .debug_abbrev  0x000000000000029a      0x1b9 string/lib_strcmp.c.o
+ .debug_abbrev  0x0000000000000453      0x1de string/lib_memcpy.c.o
+ .debug_abbrev  0x0000000000000631      0x1d7 string/lib_memset.c.o
+ .debug_abbrev  0x0000000000000808      0x1c8 string/lib_strcpy.c.o
+ .debug_abbrev  0x00000000000009d0      0x1f4 string/lib_strncpy.c.o
+ .debug_abbrev  0x0000000000000bc4      0x1b9 string/lib_strlen.c.o
+ .debug_abbrev  0x0000000000000d7d      0x1f2 string/lib_strncat.c.o
+ .debug_abbrev  0x0000000000000f6f      0x1ca string/lib_skipspace.c.o
+ .debug_abbrev  0x0000000000001139      0x1ef string/lib_isbasedigit.c.o
+ .debug_abbrev  0x0000000000001328      0x1eb stdio/lib_printf.c.o
+ .debug_abbrev  0x0000000000001513      0x201 stdlib/lib_strtol.c.o
+ .debug_abbrev  0x0000000000001714      0x210 stdlib/lib_strtoul.c.o
+ .debug_abbrev  0x0000000000001924      0x1f9 stdlib/lib_checkbase.c.o
+
+.debug_line     0x0000000000000000     0x3890
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000      0x32e init.c.o
+ .debug_line    0x000000000000032e      0x371 string/lib_strncmp.c.o
+ .debug_line    0x000000000000069f      0x2c3 string/lib_strcmp.c.o
+ .debug_line    0x0000000000000962      0x36a string/lib_memcpy.c.o
+ .debug_line    0x0000000000000ccc      0x3e2 string/lib_memset.c.o
+ .debug_line    0x00000000000010ae      0x2c0 string/lib_strcpy.c.o
+ .debug_line    0x000000000000136e      0x379 string/lib_strncpy.c.o
+ .debug_line    0x00000000000016e7      0x362 string/lib_strlen.c.o
+ .debug_line    0x0000000000001a49      0x36f string/lib_strncat.c.o
+ .debug_line    0x0000000000001db8      0x46f string/lib_skipspace.c.o
+ .debug_line    0x0000000000002227      0x498 string/lib_isbasedigit.c.o
+ .debug_line    0x00000000000026bf      0x4a3 stdio/lib_printf.c.o
+ .debug_line    0x0000000000002b62      0x44c stdlib/lib_strtol.c.o
+ .debug_line    0x0000000000002fae      0x446 stdlib/lib_strtoul.c.o
+ .debug_line    0x00000000000033f4      0x49c stdlib/lib_checkbase.c.o
+
+.debug_frame    0x0000000000000000      0x2e8
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x60 init.c.o
+ .debug_frame   0x0000000000000060       0x34 string/lib_strncmp.c.o
+ .debug_frame   0x0000000000000094       0x20 string/lib_strcmp.c.o
+ .debug_frame   0x00000000000000b4       0x44 string/lib_memcpy.c.o
+ .debug_frame   0x00000000000000f8       0x38 string/lib_memset.c.o
+ .debug_frame   0x0000000000000130       0x20 string/lib_strcpy.c.o
+ .debug_frame   0x0000000000000150       0x28 string/lib_strncpy.c.o
+ .debug_frame   0x0000000000000178       0x20 string/lib_strlen.c.o
+ .debug_frame   0x0000000000000198       0x2c string/lib_strncat.c.o
+ .debug_frame   0x00000000000001c4       0x2c string/lib_skipspace.c.o
+ .debug_frame   0x00000000000001f0       0x20 string/lib_isbasedigit.c.o
+ .debug_frame   0x0000000000000210       0x38 stdio/lib_printf.c.o
+ .debug_frame   0x0000000000000248       0x3c stdlib/lib_strtol.c.o
+ .debug_frame   0x0000000000000284       0x38 stdlib/lib_strtoul.c.o
+ .debug_frame   0x00000000000002bc       0x2c stdlib/lib_checkbase.c.o
+
+.debug_str      0x0000000000000000    0x6e045
+ *(.debug_str)
+ .debug_str     0x0000000000000000     0x5fd9 init.c.o
+ .debug_str     0x0000000000005fd9     0x7060 string/lib_strncmp.c.o
+ .debug_str     0x000000000000d039     0x6367 string/lib_strcmp.c.o
+ .debug_str     0x00000000000133a0     0x7061 string/lib_memcpy.c.o
+ .debug_str     0x000000000001a401     0x7b11 string/lib_memset.c.o
+ .debug_str     0x0000000000021f12     0x6365 string/lib_strcpy.c.o
+ .debug_str     0x0000000000028277     0x7076 string/lib_strncpy.c.o
+ .debug_str     0x000000000002f2ed     0x7057 string/lib_strlen.c.o
+ .debug_str     0x0000000000036344     0x7065 string/lib_strncat.c.o
+ .debug_str     0x000000000003d3a9     0x7ddb string/lib_skipspace.c.o
+ .debug_str     0x0000000000045184     0x859d string/lib_isbasedigit.c.o
+ .debug_str     0x000000000004d721     0x886f stdio/lib_printf.c.o
+ .debug_str     0x0000000000055f90     0x7d81 stdlib/lib_strtol.c.o
+ .debug_str     0x000000000005dd11     0x7d92 stdlib/lib_strtoul.c.o
+ .debug_str     0x0000000000065aa3     0x85a2 stdlib/lib_checkbase.c.o
+
+.debug_loc      0x0000000000000000      0xce0
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000       0xfe init.c.o
+ .debug_loc     0x00000000000000fe      0x195 string/lib_strncmp.c.o
+ .debug_loc     0x0000000000000293       0x76 string/lib_strcmp.c.o
+ .debug_loc     0x0000000000000309      0x2b5 string/lib_memcpy.c.o
+ .debug_loc     0x00000000000005be       0xb9 string/lib_memset.c.o
+ .debug_loc     0x0000000000000677       0x3e string/lib_strcpy.c.o
+ .debug_loc     0x00000000000006b5       0xc4 string/lib_strncpy.c.o
+ .debug_loc     0x0000000000000779       0x6a string/lib_strlen.c.o
+ .debug_loc     0x00000000000007e3       0x90 string/lib_strncat.c.o
+ .debug_loc     0x0000000000000873       0x36 string/lib_skipspace.c.o
+ .debug_loc     0x00000000000008a9      0x167 string/lib_isbasedigit.c.o
+ .debug_loc     0x0000000000000a10       0xfe stdlib/lib_strtol.c.o
+ .debug_loc     0x0000000000000b0e       0xee stdlib/lib_strtoul.c.o
+ .debug_loc     0x0000000000000bfc       0xe4 stdlib/lib_checkbase.c.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges   0x0000000000000000      0x100
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000       0x20 init.c.o
+ .debug_ranges  0x0000000000000020       0x10 string/lib_strncmp.c.o
+ .debug_ranges  0x0000000000000030       0x10 string/lib_strcmp.c.o
+ .debug_ranges  0x0000000000000040       0x10 string/lib_memcpy.c.o
+ .debug_ranges  0x0000000000000050       0x10 string/lib_memset.c.o
+ .debug_ranges  0x0000000000000060       0x10 string/lib_strcpy.c.o
+ .debug_ranges  0x0000000000000070       0x10 string/lib_strncpy.c.o
+ .debug_ranges  0x0000000000000080       0x10 string/lib_strlen.c.o
+ .debug_ranges  0x0000000000000090       0x10 string/lib_strncat.c.o
+ .debug_ranges  0x00000000000000a0       0x10 string/lib_skipspace.c.o
+ .debug_ranges  0x00000000000000b0       0x10 string/lib_isbasedigit.c.o
+ .debug_ranges  0x00000000000000c0       0x10 stdio/lib_printf.c.o
+ .debug_ranges  0x00000000000000d0       0x10 stdlib/lib_strtol.c.o
+ .debug_ranges  0x00000000000000e0       0x10 stdlib/lib_strtoul.c.o
+ .debug_ranges  0x00000000000000f0       0x10 stdlib/lib_checkbase.c.o
+
+.debug_macro    0x0000000000000000     0x1a90
+ *(.debug_macro)
+ .debug_macro   0x0000000000000000      0x147 init.c.o
+ .debug_macro   0x0000000000000147      0x198 string/lib_strncmp.c.o
+ .debug_macro   0x00000000000002df      0x105 string/lib_strcmp.c.o
+ .debug_macro   0x00000000000003e4      0x198 string/lib_memcpy.c.o
+ .debug_macro   0x000000000000057c      0x1c9 string/lib_memset.c.o
+ .debug_macro   0x0000000000000745      0x105 string/lib_strcpy.c.o
+ .debug_macro   0x000000000000084a      0x198 string/lib_strncpy.c.o
+ .debug_macro   0x00000000000009e2      0x198 string/lib_strlen.c.o
+ .debug_macro   0x0000000000000b7a      0x198 string/lib_strncat.c.o
+ .debug_macro   0x0000000000000d12      0x250 string/lib_skipspace.c.o
+ .debug_macro   0x0000000000000f62      0x253 string/lib_isbasedigit.c.o
+ .debug_macro   0x00000000000011b5      0x260 stdio/lib_printf.c.o
+ .debug_macro   0x0000000000001415      0x214 stdlib/lib_strtol.c.o
+ .debug_macro   0x0000000000001629      0x214 stdlib/lib_strtoul.c.o
+ .debug_macro   0x000000000000183d      0x253 stdlib/lib_checkbase.c.o
+
+.debug_addr
+ *(.debug_addr)
+
+.ARM.attributes
+                0x0000000000000000       0x35
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x0000000000000000       0x35 init.c.o
+ .ARM.attributes
+                0x0000000000000035       0x35 string/lib_strncmp.c.o
+ .ARM.attributes
+                0x000000000000006a       0x35 string/lib_strcmp.c.o
+ .ARM.attributes
+                0x000000000000009f       0x35 string/lib_memcpy.c.o
+ .ARM.attributes
+                0x00000000000000d4       0x35 string/lib_memset.c.o
+ .ARM.attributes
+                0x0000000000000109       0x35 string/lib_strcpy.c.o
+ .ARM.attributes
+                0x000000000000013e       0x35 string/lib_strncpy.c.o
+ .ARM.attributes
+                0x0000000000000173       0x35 string/lib_strlen.c.o
+ .ARM.attributes
+                0x00000000000001a8       0x35 string/lib_strncat.c.o
+ .ARM.attributes
+                0x00000000000001dd       0x35 string/lib_skipspace.c.o
+ .ARM.attributes
+                0x0000000000000212       0x35 string/lib_isbasedigit.c.o
+ .ARM.attributes
+                0x0000000000000247       0x35 stdio/lib_printf.c.o
+ .ARM.attributes
+                0x000000000000027c       0x35 stdlib/lib_strtol.c.o
+ .ARM.attributes
+                0x00000000000002b1       0x35 stdlib/lib_strtoul.c.o
+ .ARM.attributes
+                0x00000000000002e6       0x35 stdlib/lib_checkbase.c.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(/home/ahyy/Drone/Flow/Build/px4flow-v2_default.build//home/ahyy/Drone/Flow/src/modules/libc/module.pre.o elf32-littlearm)
+
+.debug_macro    0x0000000000000000      0xa6c
+ .debug_macro   0x0000000000000000      0xa6c init.c.o
+
+.debug_macro    0x0000000000000000       0x22
+ .debug_macro   0x0000000000000000       0x22 init.c.o
+
+.debug_macro    0x0000000000000000       0x22
+ .debug_macro   0x0000000000000000       0x22 init.c.o
+
+.debug_macro    0x0000000000000000       0x52
+ .debug_macro   0x0000000000000000       0x52 init.c.o
+
+.debug_macro    0x0000000000000000       0x17
+ .debug_macro   0x0000000000000000       0x17 init.c.o
+
+.debug_macro    0x0000000000000000       0x8d
+ .debug_macro   0x0000000000000000       0x8d init.c.o
+
+.debug_macro    0x0000000000000000       0x2e
+ .debug_macro   0x0000000000000000       0x2e init.c.o
+
+.debug_macro    0x0000000000000000       0x9c
+ .debug_macro   0x0000000000000000       0x9c init.c.o
+
+.debug_macro    0x0000000000000000       0x57
+ .debug_macro   0x0000000000000000       0x57 init.c.o
+
+.debug_macro    0x0000000000000000      0x16d
+ .debug_macro   0x0000000000000000      0x16d init.c.o
+
+.debug_macro    0x0000000000000000      0x353
+ .debug_macro   0x0000000000000000      0x353 init.c.o
+
+.debug_macro    0x0000000000000000       0x10
+ .debug_macro   0x0000000000000000       0x10 init.c.o
+
+.debug_macro    0x0000000000000000       0x58
+ .debug_macro   0x0000000000000000       0x58 init.c.o
+
+.debug_macro    0x0000000000000000       0x1f
+ .debug_macro   0x0000000000000000       0x1f init.c.o
+
+.debug_macro    0x0000000000000000       0x43
+ .debug_macro   0x0000000000000000       0x43 init.c.o
+
+.debug_macro    0x0000000000000000       0x20
+ .debug_macro   0x0000000000000000       0x20 init.c.o
+
+.debug_macro    0x0000000000000000       0x6a
+ .debug_macro   0x0000000000000000       0x6a init.c.o
+
+.debug_macro    0x0000000000000000       0x1c
+ .debug_macro   0x0000000000000000       0x1c init.c.o
+
+.debug_macro    0x0000000000000000       0x52
+ .debug_macro   0x0000000000000000       0x52 init.c.o
+
+.debug_macro    0x0000000000000000       0x40
+ .debug_macro   0x0000000000000000       0x40 init.c.o
+
+.debug_macro    0x0000000000000000       0x10
+ .debug_macro   0x0000000000000000       0x10 init.c.o
+
+.debug_macro    0x0000000000000000       0x40
+ .debug_macro   0x0000000000000000       0x40 init.c.o
+
+.debug_macro    0x0000000000000000       0xd7
+ .debug_macro   0x0000000000000000       0xd7 init.c.o
+
+.debug_macro    0x0000000000000000       0x1c
+ .debug_macro   0x0000000000000000       0x1c init.c.o
+
+.debug_macro    0x0000000000000000       0x3d
+ .debug_macro   0x0000000000000000       0x3d init.c.o
+
+.debug_macro    0x0000000000000000       0x1c
+ .debug_macro   0x0000000000000000       0x1c string/lib_strncmp.c.o
+
+.debug_macro    0x0000000000000000      0x18e
+ .debug_macro   0x0000000000000000      0x18e string/lib_strncmp.c.o
+
+.debug_macro    0x0000000000000000       0x10
+ .debug_macro   0x0000000000000000       0x10 string/lib_strncmp.c.o
+
+.debug_macro    0x0000000000000000       0x35
+ .debug_macro   0x0000000000000000       0x35 string/lib_strncmp.c.o
+
+.debug_macro    0x0000000000000000       0xef
+ .debug_macro   0x0000000000000000       0xef string/lib_memset.c.o
+
+.debug_macro    0x0000000000000000      0x1df
+ .debug_macro   0x0000000000000000      0x1df string/lib_memset.c.o
+
+.debug_macro    0x0000000000000000       0x16
+ .debug_macro   0x0000000000000000       0x16 string/lib_memset.c.o
+
+.debug_macro    0x0000000000000000       0x22
+ .debug_macro   0x0000000000000000       0x22 string/lib_skipspace.c.o
+
+.debug_macro    0x0000000000000000       0x1c
+ .debug_macro   0x0000000000000000       0x1c string/lib_skipspace.c.o
+
+.debug_macro    0x0000000000000000       0x10
+ .debug_macro   0x0000000000000000       0x10 string/lib_skipspace.c.o
+
+.debug_macro    0x0000000000000000       0x10
+ .debug_macro   0x0000000000000000       0x10 string/lib_skipspace.c.o
+
+.debug_macro    0x0000000000000000       0x16
+ .debug_macro   0x0000000000000000       0x16 string/lib_skipspace.c.o
+
+.debug_macro    0x0000000000000000      0x16f
+ .debug_macro   0x0000000000000000      0x16f string/lib_skipspace.c.o
+
+.debug_macro    0x0000000000000000       0x2b
+ .debug_macro   0x0000000000000000       0x2b string/lib_skipspace.c.o
+
+.debug_macro    0x0000000000000000      0x118
+ .debug_macro   0x0000000000000000      0x118 string/lib_skipspace.c.o
+
+.debug_macro    0x0000000000000000       0x1c
+ .debug_macro   0x0000000000000000       0x1c string/lib_skipspace.c.o
+
+.debug_macro    0x0000000000000000       0x16
+ .debug_macro   0x0000000000000000       0x16 string/lib_skipspace.c.o
+
+.debug_macro    0x0000000000000000       0x16
+ .debug_macro   0x0000000000000000       0x16 string/lib_skipspace.c.o
+
+.debug_macro    0x0000000000000000       0x29
+ .debug_macro   0x0000000000000000       0x29 string/lib_skipspace.c.o
+
+.debug_macro    0x0000000000000000       0x4f
+ .debug_macro   0x0000000000000000       0x4f string/lib_skipspace.c.o
+
+.debug_macro    0x0000000000000000      0x111
+ .debug_macro   0x0000000000000000      0x111 string/lib_isbasedigit.c.o
+
+.debug_macro    0x0000000000000000       0x16
+ .debug_macro   0x0000000000000000       0x16 stdio/lib_printf.c.o
+
+.debug_macro    0x0000000000000000       0x97
+ .debug_macro   0x0000000000000000       0x97 stdio/lib_printf.c.o
+
+.debug_macro    0x0000000000000000       0xf6
+ .debug_macro   0x0000000000000000       0xf6 stdio/lib_printf.c.o
+
+.debug_macro    0x0000000000000000       0x4c
+ .debug_macro   0x0000000000000000       0x4c stdio/lib_printf.c.o
+
+.debug_macro    0x0000000000000000       0x16
+ .debug_macro   0x0000000000000000       0x16 stdio/lib_printf.c.o
+
+.debug_macro    0x0000000000000000      0x10e
+ .debug_macro   0x0000000000000000      0x10e stdlib/lib_strtol.c.o
+
+.debug_macro    0x0000000000000000       0x86
+ .debug_macro   0x0000000000000000       0x86 stdlib/lib_strtol.c.o
+
+.debug_macro    0x0000000000000000       0x67
+ .debug_macro   0x0000000000000000       0x67 stdlib/lib_strtol.c.o

@@ -1,0 +1,439 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD px4_log.c.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.iplt
+ *(.rel.iplt)
+
+.rela.iplt
+ *(.rela.iplt)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(SORT_NONE(.init))
+
+.plt
+ *(.plt)
+
+.iplt
+ *(.iplt)
+
+.text           0x0000000000000000        0x0
+ *(.text .stub)
+ .text          0x0000000000000000        0x0 px4_log.c.o
+ *(.gnu.warning)
+
+.fini
+ *(SORT_NONE(.fini))
+
+.rodata
+ *(.rodata)
+
+.rodata.str1.4  0x0000000000000000       0x26
+ .rodata.str1.4
+                0x0000000000000000       0x26 px4_log.c.o
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab)
+
+.ARM.exidx
+ *(.ARM.exidx)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got.plt)
+ *(.igot.plt)
+ *(.got)
+ *(.igot)
+
+.data           0x0000000000000000        0x0
+ *(.data)
+ .data          0x0000000000000000        0x0 px4_log.c.o
+
+.data.__px4_log_level_current
+                0x0000000000000000        0x4
+ .data.__px4_log_level_current
+                0x0000000000000000        0x4 px4_log.c.o
+                0x0000000000000000                __px4_log_level_current
+
+.data.__px4_log_level_str
+                0x0000000000000000       0x14
+ .data.__px4_log_level_str
+                0x0000000000000000       0x14 px4_log.c.o
+                0x0000000000000000                __px4_log_level_str
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000        0x0
+ *(.bss)
+ .bss           0x0000000000000000        0x0 px4_log.c.o
+ *(COMMON)
+
+.stack
+ *(.stack)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x7f
+ *(.comment)
+ .comment       0x0000000000000000       0x7f px4_log.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc px4_log.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc px4_log.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc px4_log.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc px4_log.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc px4_log.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc px4_log.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc px4_log.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc px4_log.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc px4_log.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc px4_log.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc px4_log.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc px4_log.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc px4_log.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc px4_log.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc px4_log.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc px4_log.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc px4_log.c.o
+
+.group          0x0000000000000000        0xc
+ .group         0x0000000000000000        0xc px4_log.c.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000       0x18
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x18 px4_log.c.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000       0xba
+ *(.debug_info)
+ .debug_info    0x0000000000000000       0xba px4_log.c.o
+
+.debug_abbrev   0x0000000000000000       0x69
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x69 px4_log.c.o
+
+.debug_line     0x0000000000000000      0x2a1
+ *(.debug_line .debug_line.* .debug_line_end)
+ .debug_line    0x0000000000000000      0x2a1 px4_log.c.o
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str      0x0000000000000000     0x78b1
+ *(.debug_str)
+ .debug_str     0x0000000000000000     0x78b1 px4_log.c.o
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro    0x0000000000000000       0xe8
+ *(.debug_macro)
+ .debug_macro   0x0000000000000000       0xe8 px4_log.c.o
+
+.debug_addr
+ *(.debug_addr)
+
+.ARM.attributes
+                0x0000000000000000       0x35
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x0000000000000000       0x35 px4_log.c.o
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+OUTPUT(/home/ahyy/Drone/Flow/Build/px4flow-v2_default.build//home/ahyy/Drone/Flow/src/platforms/common/module.pre.o elf32-littlearm)
+
+.debug_macro    0x0000000000000000      0xa6c
+ .debug_macro   0x0000000000000000      0xa6c px4_log.c.o
+
+.debug_macro    0x0000000000000000       0x22
+ .debug_macro   0x0000000000000000       0x22 px4_log.c.o
+
+.debug_macro    0x0000000000000000       0x22
+ .debug_macro   0x0000000000000000       0x22 px4_log.c.o
+
+.debug_macro    0x0000000000000000       0x52
+ .debug_macro   0x0000000000000000       0x52 px4_log.c.o
+
+.debug_macro    0x0000000000000000       0x17
+ .debug_macro   0x0000000000000000       0x17 px4_log.c.o
+
+.debug_macro    0x0000000000000000       0x8d
+ .debug_macro   0x0000000000000000       0x8d px4_log.c.o
+
+.debug_macro    0x0000000000000000       0x2e
+ .debug_macro   0x0000000000000000       0x2e px4_log.c.o
+
+.debug_macro    0x0000000000000000       0xef
+ .debug_macro   0x0000000000000000       0xef px4_log.c.o
+
+.debug_macro    0x0000000000000000       0xa2
+ .debug_macro   0x0000000000000000       0xa2 px4_log.c.o
+
+.debug_macro    0x0000000000000000       0x57
+ .debug_macro   0x0000000000000000       0x57 px4_log.c.o
+
+.debug_macro    0x0000000000000000       0x6a
+ .debug_macro   0x0000000000000000       0x6a px4_log.c.o
+
+.debug_macro    0x0000000000000000      0x1df
+ .debug_macro   0x0000000000000000      0x1df px4_log.c.o
+
+.debug_macro    0x0000000000000000       0x82
+ .debug_macro   0x0000000000000000       0x82 px4_log.c.o
+
+.debug_macro    0x0000000000000000      0x460
+ .debug_macro   0x0000000000000000      0x460 px4_log.c.o
+
+.debug_macro    0x0000000000000000       0xfd
+ .debug_macro   0x0000000000000000       0xfd px4_log.c.o
+
+.debug_macro    0x0000000000000000      0x353
+ .debug_macro   0x0000000000000000      0x353 px4_log.c.o
+
+.debug_macro    0x0000000000000000       0x30
+ .debug_macro   0x0000000000000000       0x30 px4_log.c.o
+
+.debug_macro    0x0000000000000000       0xe5
+ .debug_macro   0x0000000000000000       0xe5 px4_log.c.o

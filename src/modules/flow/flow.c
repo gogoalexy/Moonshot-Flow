@@ -50,13 +50,15 @@
 #include "core_cm4_simd.h"
 
 #define FRAME_SIZE	global_data.param[PARAM_IMAGE_WIDTH]
-#define SEARCH_SIZE	global_data.param[PARAM_MAX_FLOW_PIXEL] // maximum offset to search
+#define SEARCH_SIZE global_data.param[PARAM_MAX_FLOW_PIXEL] // maximum offset to search
 #define TILE_SIZE	8               						// x & y tile size
 #define NUM_BLOCKS	5                                       // x & y number of tiles to check
 
 #define sign(x) (( x > 0 ) - ( x < 0 ))
 
 uint8_t compute_flow(uint8_t *image1, uint8_t *image2, float x_rate, float y_rate, float z_rate, float *pixel_flow_x, float *pixel_flow_y);
+
+uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, float y_rate, float z_rate, float *pixel_flow_x, float *pixel_flow_y);
 
 // compliments of Adam Williams
 #define ABSDIFF(frame1, frame2) \
@@ -743,6 +745,144 @@ uint8_t compute_flow(uint8_t *image1, uint8_t *image2, float x_rate, float y_rat
 		*pixel_flow_x = 0.0f;
 		*pixel_flow_y = 0.0f;
 		return 0;
+	}
+
+	/* calculate quality */
+	uint8_t qual = (uint8_t)(meancount * 255 / (NUM_BLOCKS*NUM_BLOCKS));
+
+	return qual;
+}
+
+
+uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, float y_rate, float z_rate, float *pixel_flow_x, float *pixel_flow_y) {
+
+	/* constants */
+	const int16_t winmin = -SEARCH_SIZE;
+	const int16_t winmax = SEARCH_SIZE;
+	//const uint16_t hist_size = 2*(winmax-winmin+1)+1;
+   const uint16_t flow_size = 8*8;
+
+	/* variables */
+	uint16_t pixLo = SEARCH_SIZE + 1;
+	uint16_t pixHi = FRAME_SIZE - (SEARCH_SIZE + 1) - TILE_SIZE;
+	uint16_t pixStep = (pixHi - pixLo) / NUM_BLOCKS + 1;
+	uint16_t i, j;
+	uint32_t acc[8];           // subpixels
+	//uint16_t histx[hist_size]; // counter for x shift
+	//uint16_t histy[hist_size]; // counter for y shift
+   uint8_t flowx[flow_size];
+   uint8_t flowy[flow_size];
+	//int8_t  dirsx[64];         // shift directions in x
+	//int8_t  dirsy[64];         // shift directions in y
+	//uint8_t  subdirs[64];      // shift directions of best subpixels
+	float meanflowx = 0.0f;
+	float meanflowy = 0.0f;
+	uint16_t meancount = 0;
+
+	/* initialize with 0 */
+	//for (j = 0; j < hist_size; j++) { histx[j] = 0; histy[j] = 0; }
+
+	/* iterate over all patterns
+	 */
+   uint8_t flow_index = 0;
+	for (j = pixLo; j < pixHi; j += pixStep)
+	{
+		for (i = pixLo; i < pixHi; i += pixStep)
+		{
+			/* test pixel if it is suitable for flow tracking
+			uint32_t diff = compute_diff(image1, i, j, (uint16_t) global_data.param[PARAM_IMAGE_WIDTH]);
+			if (diff < global_data.param[PARAM_BOTTOM_FLOW_FEATURE_THRESHOLD])
+			{
+				continue;
+			}
+            */
+			uint32_t dist = 0xFFFFFFFF; // set initial distance to "infinity"
+			int8_t sumx = 0;
+			int8_t sumy = 0;
+			int8_t ii, jj;
+
+			uint8_t *base1 = image1 + j * (uint16_t) global_data.param[PARAM_IMAGE_WIDTH] + i;
+
+			for (jj = winmin; jj <= winmax; jj++)
+			{
+				uint8_t *base2 = image2 + (j+jj) * (uint16_t) global_data.param[PARAM_IMAGE_WIDTH] + i;
+
+				for (ii = winmin; ii <= winmax; ii++)
+				{
+//					uint32_t temp_dist = compute_sad_8x8(image1, image2, i, j, i + ii, j + jj, (uint16_t) global_data.param[PARAM_IMAGE_WIDTH]);
+					uint32_t temp_dist = ABSDIFF(base1, base2 + ii);
+					if (temp_dist < dist)
+					{
+						sumx = ii;
+						sumy = jj;
+						dist = temp_dist;
+					}
+				}
+			}
+
+			/* acceptance SAD distance threshhold */
+			if (dist < global_data.param[PARAM_BOTTOM_FLOW_VALUE_THRESHOLD])
+			{
+				meanflowx += (float) sumx;
+				meanflowy += (float) sumy;
+
+				compute_subpixel(image1, image2, i, j, i + sumx, j + sumy, acc, (uint16_t) global_data.param[PARAM_IMAGE_WIDTH]);
+				uint32_t mindist = dist; // best SAD until now
+				uint8_t mindir = 8; // direction 8 for no direction
+				for(uint8_t k = 0; k < 8; k++)
+				{
+					if (acc[k] < mindist)
+					{
+						// SAD becomes better in direction k
+						mindist = acc[k];
+						mindir = k;
+					}
+				}
+				//dirsx[meancount] = sumx;
+				//dirsy[meancount] = sumy;
+				//subdirs[meancount] = mindir;
+				meancount++;
+
+				if (mindir == 0 || mindir == 1 || mindir == 7) sumx += 1;
+				if (mindir == 3 || mindir == 4 || mindir == 5) sumx += -1;
+
+				if (mindir == 5 || mindir == 6 || mindir == 7) sumy += -1;
+				if (mindir == 1 || mindir == 2 || mindir == 3) sumy += 1;
+
+			}
+         flowx[flow_index] = sumx;
+         flowy[flow_index] = sumy;
+         flow_index++;
+		}
+	}
+
+	/* create flow image if needed (image1 is not needed anymore)
+	 * -> can be used for debugging purpose
+	 */
+   flow_index = 0;
+   uint16_t px = 0;
+   uint16_t py = 0;
+	if (FLOAT_AS_BOOL(global_data.param[PARAM_USB_SEND_VIDEO]))//&& global_data.param[PARAM_VIDEO_USB_MODE] == FLOW_VIDEO)
+	{
+		for (j = pixLo; j < pixHi; j += pixStep)
+		{
+			for (i = pixLo; i < pixHi; i += pixStep)
+			{
+
+				uint32_t diff = compute_diff(image1, i, j, (uint16_t) global_data.param[PARAM_IMAGE_WIDTH]);
+				if (diff > global_data.param[PARAM_BOTTOM_FLOW_FEATURE_THRESHOLD])
+				{
+                px = i+flowx[flow_index];
+                py = j+flowy[flow_index];
+					image1[j * ((uint16_t) global_data.param[PARAM_IMAGE_WIDTH]) + i] = 155;
+                if(px<64 && py<64)
+                    {
+                    image1[py * ((uint16_t) global_data.param[PARAM_IMAGE_WIDTH]) + px] = 255;
+                    }
+				}
+
+			}
+		}
 	}
 
 	/* calculate quality */

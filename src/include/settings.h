@@ -152,6 +152,9 @@ enum global_param_id_t
 	PARAM_BRIGHT,
 	DEBUG_VARIABLE,
 
+    //Pixel-wise-output
+    PARAM_FULL_FLOW,
+
 	ONBOARD_PARAM_COUNT
 
 };

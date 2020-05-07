@@ -332,6 +332,9 @@ int main(void)
 	int valid_frame_count = 0;
 	int pixel_flow_count = 0;
 
+    int8_t *full_flow_x = NULL;
+    int8_t *full_flow_y = NULL;
+
 	static float accumulated_flow_x = 0;
 	static float accumulated_flow_y = 0;
 	static float accumulated_gyro_x = 0;
@@ -429,7 +432,7 @@ int main(void)
 			dma_copy_image_buffers(&current_image, &previous_image, image_size, 1);
 
 			/* compute optical flow */
-			qual = compute_flow_direct_out(previous_image, current_image, x_rate, y_rate, z_rate, &pixel_flow_x, &pixel_flow_y);
+			qual = compute_flow_direct_out(previous_image, current_image, x_rate, y_rate, z_rate, &pixel_flow_x, &pixel_flow_y, full_flow_x, full_flow_y);
 
 			/*
 			 * real point P (X,Y,Z), image plane projection p (x,y,z), focal-length f, distance-to-scene Z

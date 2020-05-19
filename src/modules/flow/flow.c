@@ -770,8 +770,6 @@ uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, 
 	uint32_t acc[8];           // subpixels
 	//uint16_t histx[hist_size]; // counter for x shift
 	//uint16_t histy[hist_size]; // counter for y shift
-   int8_t flowx[flow_size];
-   int8_t flowy[flow_size];
 	//int8_t  dirsx[64];         // shift directions in x
 	//int8_t  dirsy[64];         // shift directions in y
 	//uint8_t  subdirs[64];      // shift directions of best subpixels
@@ -780,7 +778,7 @@ uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, 
 	uint16_t meancount = 0;
 
 	/* initialize with 0 */
-	for (j = 0; j < flow_size; j++) { flowx[j] = 0; flowy[j] = 0; }
+	for (j = 0; j < flow_size; j++) { full_flow_x[j] = 0; full_flow_y[j] = 0; }
 
 	/* iterate over all patterns
 	 */
@@ -850,8 +848,8 @@ uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, 
 				if (mindir == 1 || mindir == 2 || mindir == 3) sumy += 1;
 
 			}
-         flowx[flow_index] = sumx;
-         flowy[flow_index] = sumy;
+         full_flow_x[flow_index] = sumx;
+         full_flow_y[flow_index] = sumy;
 		}
 	}
 
@@ -870,8 +868,8 @@ uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, 
 			{
 
             image1[j * ((uint16_t) global_data.param[PARAM_IMAGE_WIDTH]) + i] = 100;
-            px = i+flowx[flow_index];
-            py = j+flowy[flow_index];
+            px = i+full_flow_x[flow_index];
+            py = j+full_flow_y[flow_index];
             if(px<64 && py<64)
                {
                 image1[py * ((uint16_t) global_data.param[PARAM_IMAGE_WIDTH]) + px] = 255;
@@ -881,8 +879,7 @@ uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, 
 			}
 		}
 	}
-   full_flow_x = flowx;
-   full_flow_y = flowy;
+
 	/* calculate quality */
 	uint8_t qual = (uint8_t)(meancount * 255 / (NUM_BLOCKS*NUM_BLOCKS));
 

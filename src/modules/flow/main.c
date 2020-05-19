@@ -332,8 +332,8 @@ int main(void)
 	int valid_frame_count = 0;
 	int pixel_flow_count = 0;
 
-    int8_t *full_flow_x = NULL;
-    int8_t *full_flow_y = NULL;
+    int8_t full_flow_x[64];
+    int8_t full_flow_y[64];
 
 	static float accumulated_flow_x = 0;
 	static float accumulated_flow_y = 0;
@@ -362,6 +362,8 @@ int main(void)
 			{
 				image_buffer_8bit_1[i] = 0;
 				image_buffer_8bit_2[i] = 0;
+            full_flow_x[i] = 0;
+            full_flow_y[i] = 0;
 			}
 			delay(500);
 			continue;
@@ -685,6 +687,7 @@ int main(void)
 			send_lpos_now = false;
 		}
 
+
 		/*  transmit raw 8-bit image */
 		if (FLOAT_AS_BOOL(global_data.param[PARAM_USB_SEND_VIDEO])&& send_image_now)
 		{
@@ -693,10 +696,16 @@ int main(void)
 			uint16_t image_width_send;
 			uint16_t image_height_send;
 
-			image_size_send = image_size;
-			image_width_send = global_data.param[PARAM_IMAGE_WIDTH];
-			image_height_send = global_data.param[PARAM_IMAGE_HEIGHT];
+			image_size_send = 64;
+			image_width_send = 8;
+			image_height_send = 8;
 
+         for(int index=0; index<image_size_send; index++)
+           {
+            full_flow_x[index] = full_flow_x[index]+128;
+           }
+
+           //MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN=253
 			mavlink_msg_data_transmission_handshake_send(
 					MAVLINK_COMM_2,
 					MAVLINK_DATA_STREAM_IMG_RAW8U,
@@ -710,7 +719,7 @@ int main(void)
 			uint16_t frame = 0;
 			for (frame = 0; frame < image_size_send / MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN + 1; frame++)
 			{
-				mavlink_msg_encapsulated_data_send(MAVLINK_COMM_2, frame, &((uint8_t *) previous_image)[frame * MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN]);
+				mavlink_msg_encapsulated_data_send(MAVLINK_COMM_2, frame, &((uint8_t *) full_flow_x)[frame * MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN]);
 			}
 
 			send_image_now = false;

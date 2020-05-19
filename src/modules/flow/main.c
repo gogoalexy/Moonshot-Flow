@@ -88,6 +88,8 @@ __ALIGN_BEGIN USB_OTG_CORE_HANDLE  USB_OTG_dev __ALIGN_END;
 /* fast image buffers for calculations */
 uint8_t image_buffer_8bit_1[FULL_IMAGE_SIZE] __attribute__((section(".ccm")));
 uint8_t image_buffer_8bit_2[FULL_IMAGE_SIZE] __attribute__((section(".ccm")));
+int8_t flow_buffer_8bit_x[64*64] __attribute__((section(".ccm")));
+int8_t flow_buffer_8bit_y[64*64] __attribute__((section(".ccm")));
 uint8_t buffer_reset_needed;
 
 /* boot time in milliseconds ticks */
@@ -296,6 +298,8 @@ int main(void)
 
 	uint8_t * current_image = image_buffer_8bit_1;
 	uint8_t * previous_image = image_buffer_8bit_2;
+   int8_t* full_flow_x = flow_buffer_8bit_x;
+   int8_t* full_flow_y = flow_buffer_8bit_y;
 
 	/* usart config*/
 	usart_init();
@@ -331,9 +335,6 @@ int main(void)
 	float velocity_y_lp = 0.0f;
 	int valid_frame_count = 0;
 	int pixel_flow_count = 0;
-
-    int8_t full_flow_x[64];
-    int8_t full_flow_y[64];
 
 	static float accumulated_flow_x = 0;
 	static float accumulated_flow_y = 0;

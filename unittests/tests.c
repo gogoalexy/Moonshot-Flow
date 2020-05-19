@@ -4,7 +4,7 @@
 
 
 #include <stdio.h>
-#include "../inc/sonar_mode_filter.h"
+#include "../src/include/sonar_mode_filter.h"
 
 int main(int argc, char *argv[]) {
 
@@ -22,5 +22,5 @@ int main(int argc, char *argv[]) {
 
 		printf("in: %f\tout: %f\n", (double)inf, (double)out);
 	}
-	
+
 }

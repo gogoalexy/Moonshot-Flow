@@ -704,12 +704,13 @@ int main(void)
          for(int index=0; index<image_size_send; index++)
            {
             full_flow_x[index] = full_flow_x[index]+128;
+            full_flow_y[index] = full_flow_y[index]+128;
            }
 
            //MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN=253
 			mavlink_msg_data_transmission_handshake_send(
 					MAVLINK_COMM_2,
-					MAVLINK_DATA_STREAM_IMG_RAW8U,
+					MAVLINK_DATA_STREAM_IMG_RAW8S,
 					image_size_send,
 					image_width_send,
 					image_height_send,
@@ -721,6 +722,21 @@ int main(void)
 			for (frame = 0; frame < image_size_send / MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN + 1; frame++)
 			{
 				mavlink_msg_encapsulated_data_send(MAVLINK_COMM_2, frame, &((uint8_t *) full_flow_x)[frame * MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN]);
+			}
+
+        mavlink_msg_data_transmission_handshake_send(
+					MAVLINK_COMM_2,
+					MAVLINK_DATA_STREAM_IMG_RAW8S,
+					image_size_send,
+					image_width_send,
+					image_height_send,
+					image_size_send / MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN + 1,
+					MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN,
+					100);
+			LEDToggle(LED_COM);
+			for (frame = 0; frame < image_size_send / MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN + 1; frame++)
+			{
+				mavlink_msg_encapsulated_data_send(MAVLINK_COMM_2, frame, &((uint8_t *) full_flow_y)[frame * MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN]);
 			}
 
 			send_image_now = false;

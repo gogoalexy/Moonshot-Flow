@@ -35,7 +35,7 @@
 
 export PX4_TARGET_OS 	 ?= baremetal
 
-# PX4_TARGET_OS	can be baremetal 
+# PX4_TARGET_OS	can be baremetal
 ifeq ($(PX4_TARGET_OS),)
 $(error Use: make PX4_TARGET_OS=<target> where <target> is baremetal)
 endif
@@ -54,7 +54,7 @@ export PX4_LIB_DIR	 = $(abspath $(PX4_BASE)/src/lib)/
 export PX4_PLATFORMS_DIR = $(abspath $(PX4_BASE)/src/platforms)/
 export PX4_TOOLS_DIR	 = $(abspath $(PX4_BASE)/Tools)/
 export PX4_MK_DIR	 = $(abspath $(PX4_BASE)/makefiles)/
-export MAVLINK_SRC	 = $(abspath $(PX4_BASE)/mavlink/include/mavlink/v1.0)/
+export MAVLINK_SRC	 = $(abspath $(PX4_BASE)/mavlink/include/mavlink/v1.0-ms)/
 export UAVCAN_DIR	 = $(abspath $(PX4_BASE)/uavcan)/
 export IMAGE_DIR	 = $(abspath $(PX4_BASE)/Images)/
 export BUILD_DIR	 = $(abspath $(PX4_BASE)/Build)/

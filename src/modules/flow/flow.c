@@ -58,7 +58,7 @@
 
 uint8_t compute_flow(uint8_t *image1, uint8_t *image2, float x_rate, float y_rate, float z_rate, float *pixel_flow_x, float *pixel_flow_y);
 
-uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, float y_rate, float z_rate, float *pixel_flow_x, float *pixel_flow_y, int8_t *full_flow_x, int8_t *full_flow_y);
+uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, float y_rate, float z_rate, float *pixel_flow_x, float *pixel_flow_y, int8_t *full_flow);
 
 // compliments of Adam Williams
 #define ABSDIFF(frame1, frame2) \
@@ -754,13 +754,13 @@ uint8_t compute_flow(uint8_t *image1, uint8_t *image2, float x_rate, float y_rat
 }
 
 
-uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, float y_rate, float z_rate, float *pixel_flow_x, float *pixel_flow_y, int8_t *full_flow_x, int8_t *full_flow_y) {
+uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, float y_rate, float z_rate, float *pixel_flow_x, float *pixel_flow_y, int8_t *full_flow) {
 
 	/* constants */
 	const int16_t winmin = -SEARCH_SIZE;
 	const int16_t winmax = SEARCH_SIZE;
 	//const uint16_t hist_size = 2*(winmax-winmin+1)+1;
-   const uint16_t flow_size = 8*8;
+   const uint16_t flow_size = 8*8*2;
 
 	/* variables */
 	uint16_t pixLo = SEARCH_SIZE + 1;
@@ -778,7 +778,7 @@ uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, 
 	uint16_t meancount = 0;
 
 	/* initialize with 0 */
-	for (j = 0; j < flow_size; j++) { full_flow_x[j] = 0; full_flow_y[j] = 0; }
+	for (j = 0; j < flow_size; j++) { full_flow[j] = 0; }
 
 	/* iterate over all patterns
 	 */
@@ -848,8 +848,8 @@ uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, 
 				if (mindir == 1 || mindir == 2 || mindir == 3) sumy += 1;
 
 			}
-         full_flow_x[flow_index] = sumx;
-         full_flow_y[flow_index] = sumy;
+         full_flow[2*flow_index] = sumx;
+         full_flow[2*flow_index+1] = sumy;
 		}
 	}
 
@@ -868,8 +868,8 @@ uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, 
 			{
 
             image1[j * ((uint16_t) global_data.param[PARAM_IMAGE_WIDTH]) + i] = 100;
-            px = i+full_flow_x[flow_index];
-            py = j+full_flow_y[flow_index];
+            px = i+full_flow[2*flow_index];
+            py = j+full_flow[2*flow_index+1];
             if(px<64 && py<64)
                {
                 image1[py * ((uint16_t) global_data.param[PARAM_IMAGE_WIDTH]) + px] = 255;

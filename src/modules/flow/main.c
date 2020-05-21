@@ -88,8 +88,7 @@ __ALIGN_BEGIN USB_OTG_CORE_HANDLE  USB_OTG_dev __ALIGN_END;
 /* fast image buffers for calculations */
 uint8_t image_buffer_8bit_1[FULL_IMAGE_SIZE] __attribute__((section(".ccm")));
 uint8_t image_buffer_8bit_2[FULL_IMAGE_SIZE] __attribute__((section(".ccm")));
-int8_t flow_buffer_8bit_x[64*64] __attribute__((section(".ccm")));
-int8_t flow_buffer_8bit_y[64*64] __attribute__((section(".ccm")));
+int8_t flow_buffer_8bit[64*64*2] __attribute__((section(".ccm")));
 uint8_t buffer_reset_needed;
 
 /* boot time in milliseconds ticks */
@@ -298,8 +297,7 @@ int main(void)
 
 	uint8_t * current_image = image_buffer_8bit_1;
 	uint8_t * previous_image = image_buffer_8bit_2;
-   int8_t* full_flow_x = flow_buffer_8bit_x;
-   int8_t* full_flow_y = flow_buffer_8bit_y;
+   int8_t* full_flow = flow_buffer_8bit;
 
 	/* usart config*/
 	usart_init();
@@ -363,8 +361,10 @@ int main(void)
 			{
 				image_buffer_8bit_1[i] = 0;
 				image_buffer_8bit_2[i] = 0;
-            full_flow_x[i] = 0;
-            full_flow_y[i] = 0;
+			}
+         for (int i = 0; i < global_data.param[PARAM_IMAGE_WIDTH] * global_data.param[PARAM_IMAGE_HEIGHT]*2; i++)
+			{
+            full_flow[i] = 0;
 			}
 			delay(500);
 			continue;
@@ -435,7 +435,7 @@ int main(void)
 			dma_copy_image_buffers(&current_image, &previous_image, image_size, 1);
 
 			/* compute optical flow */
-			qual = compute_flow_direct_out(previous_image, current_image, x_rate, y_rate, z_rate, &pixel_flow_x, &pixel_flow_y, full_flow_x, full_flow_y);
+			qual = compute_flow_direct_out(previous_image, current_image, x_rate, y_rate, z_rate, &pixel_flow_x, &pixel_flow_y, full_flow);
 
 			/*
 			 * real point P (X,Y,Z), image plane projection p (x,y,z), focal-length f, distance-to-scene Z
@@ -697,15 +697,10 @@ int main(void)
 			uint16_t image_width_send;
 			uint16_t image_height_send;
 
-			image_size_send = 64;
-			image_width_send = 8;
+			image_size_send = 64*2;
+			image_width_send = 8*2;
 			image_height_send = 8;
 
-         for(int index=0; index<image_size_send; index++)
-           {
-            full_flow_x[index] = full_flow_x[index]+128;
-            full_flow_y[index] = full_flow_y[index]+128;
-           }
 
            //MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN=253
 			mavlink_msg_data_transmission_handshake_send(
@@ -721,23 +716,9 @@ int main(void)
 			uint16_t frame = 0;
 			for (frame = 0; frame < image_size_send / MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN + 1; frame++)
 			{
-				mavlink_msg_encapsulated_data_send(MAVLINK_COMM_2, frame, &((uint8_t *) full_flow_x)[frame * MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN]);
+				mavlink_msg_encapsulated_data_send(MAVLINK_COMM_2, frame, &((uint8_t *) full_flow)[frame * MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN]);
 			}
 
-        mavlink_msg_data_transmission_handshake_send(
-					MAVLINK_COMM_2,
-					MAVLINK_DATA_STREAM_IMG_RAW8S,
-					image_size_send,
-					image_width_send,
-					image_height_send,
-					image_size_send / MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN + 1,
-					MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN,
-					100);
-			LEDToggle(LED_COM);
-			for (frame = 0; frame < image_size_send / MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN + 1; frame++)
-			{
-				mavlink_msg_encapsulated_data_send(MAVLINK_COMM_2, frame, &((uint8_t *) full_flow_y)[frame * MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN]);
-			}
 
 			send_image_now = false;
 		}

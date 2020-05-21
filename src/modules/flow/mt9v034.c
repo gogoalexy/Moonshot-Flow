@@ -2,9 +2,9 @@
  *
  *   Copyright (C) 2013 PX4 Development Team. All rights reserved.
  *   Author: Laurens Mackay <mackayl@student.ethz.ch>
- *   		 Dominik Honegger <dominik.honegger@inf.ethz.ch>
- *   		 Petri Tanskanen <tpetri@inf.ethz.ch>
- *   		 Samuel Zihlmann <samuezih@ee.ethz.ch>
+ *           Dominik Honegger <dominik.honegger@inf.ethz.ch>
+ *           Petri Tanskanen <tpetri@inf.ethz.ch>
+ *           Samuel Zihlmann <samuezih@ee.ethz.ch>
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -47,177 +47,177 @@
   */
 void mt9v034_context_configuration(void)
 {
-	/* Chip Control
-	 *
-	 * bits           | 15 | ... | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
-	 * -------------------------------------------------------------------
-	 * current values | 0  | ... | 0 | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
-	 *
-	 * (0:2) Scan Mode (Progressive scan)
-	 * (3:4) Sensor Operation Mode (Master mode)
-	 * (5) Stereoscopy Mode (Disable)
-	 * (6) Stereoscopic Master/Slave mode (not used)
-	 * (7) Parallel Output Enable (Enable)
-	 * (8) Simultaneous/Sequential Mode (Simultaneous mode)
-	 * (9) Reserved
-	 *
-	 * (15)Context A (0) / Context B (1)
-	 *
-	 */
+    /* Chip Control
+     *
+     * bits           | 15 | ... | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+     * -------------------------------------------------------------------
+     * current values | 0  | ... | 0 | 1 | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
+     *
+     * (0:2) Scan Mode (Progressive scan)
+     * (3:4) Sensor Operation Mode (Master mode)
+     * (5) Stereoscopy Mode (Disable)
+     * (6) Stereoscopic Master/Slave mode (not used)
+     * (7) Parallel Output Enable (Enable)
+     * (8) Simultaneous/Sequential Mode (Simultaneous mode)
+     * (9) Reserved
+     *
+     * (15)Context A (0) / Context B (1)
+     *
+     */
 
-	uint16_t new_control;
+    uint16_t new_control;
 
-	if (FLOAT_AS_BOOL(global_data.param[PARAM_VIDEO_ONLY]))
-		new_control = 0x8188; // Context B
-	else
-		new_control = 0x0188; // Context A
+    if (FLOAT_AS_BOOL(global_data.param[PARAM_VIDEO_ONLY]))
+        new_control = 0x8188; // Context B
+    else
+        new_control = 0x0188; // Context A
 
-	/* image dimentions */
-	uint16_t new_width_context_a  = global_data.param[PARAM_IMAGE_WIDTH] * 4; // windowing off, row + col bin reduce size
-	uint16_t new_height_context_a = global_data.param[PARAM_IMAGE_HEIGHT] * 4;
-	uint16_t new_width_context_b  = FULL_IMAGE_ROW_SIZE * 4; // windowing off, row + col bin reduce size
-	uint16_t new_height_context_b = FULL_IMAGE_COLUMN_SIZE * 4;
+    /* image dimentions */
+    uint16_t new_width_context_a  = global_data.param[PARAM_IMAGE_WIDTH] * 4; // windowing off, row + col bin reduce size
+    uint16_t new_height_context_a = global_data.param[PARAM_IMAGE_HEIGHT] * 4;
+    uint16_t new_width_context_b  = FULL_IMAGE_ROW_SIZE * 4; // windowing off, row + col bin reduce size
+    uint16_t new_height_context_b = FULL_IMAGE_COLUMN_SIZE * 4;
 
-	/* blanking settings */
-	uint16_t new_hor_blanking_context_a = 425 + MINIMUM_HORIZONTAL_BLANKING;// 709 is minimum value without distortions
-	uint16_t new_ver_blanking_context_a = 10; // this value is the first without image errors (dark lines)
-	uint16_t new_hor_blanking_context_b = MAX_IMAGE_WIDTH - new_width_context_b + MINIMUM_HORIZONTAL_BLANKING;
-	if (new_hor_blanking_context_b < 800) {
-		new_hor_blanking_context_b = 800;
-	}
-	uint16_t new_ver_blanking_context_b = 10;
-
-
-	/* Read Mode
-	 *
-	 * bits           | ... | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
-	 * -------------------------------------------------------------------
-	 * current values | ... |  0 | 1 | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
-	 *
-	 * (1:0) Row Bin
-	 * (3:2) Column Bin
-	 * (9:8) Reserved
-	 *
-	 */
-	uint16_t new_readmode_context_a = 0x30A ; // row + col bin 4 enable, (9:8) default
-	uint16_t new_readmode_context_b = 0x305 ; // row bin 2 col bin 4 enable, (9:8) default
-
-	/*
-	 * Settings for both context:
-	 *
-	 * Exposure time should not affect frame time
-	 * so we set max on 64 (lines) = 0x40
-	 */
-	uint16_t min_exposure = 0x0001; // default
-	uint16_t pixel_count = 4096; //64x64 take all pixels to estimate exposure time // VALID RANGE: 1-65535
-	uint16_t shutter_width_ctrl = 0x0164; // default from context A
-	uint16_t aec_update_freq = 0x02; // default Number of frames to skip between changes in AEC VALID RANGE: 0-15
-	uint16_t aec_low_pass = 0x01; // default VALID RANGE: 0-2
-	uint16_t agc_update_freq = 0x02; // default Number of frames to skip between changes in AGC VALID RANGE: 0-15
-	uint16_t agc_low_pass = 0x02; // default VALID RANGE: 0-2
-
-	uint16_t resolution_ctrl = 0x0303; // 12 bit adc for low light
-	uint16_t max_gain = global_data.param[PARAM_GAIN_MAX];
-	uint16_t max_exposure = global_data.param[PARAM_EXPOSURE_MAX];
-	uint16_t coarse_sw1 = global_data.param[PARAM_SHTR_W_1];
-	uint16_t coarse_sw2 = global_data.param[PARAM_SHTR_W_2];
-	uint16_t total_shutter_width = global_data.param[PARAM_SHTR_W_TOT];
-	uint16_t hdr_enabled = 0x0000;
-	bool hdr_enable_flag = global_data.param[PARAM_HDR] > 0;
-	if (hdr_enable_flag) {
-		hdr_enabled = 0x0100;
-	}
-
-	bool aec_enable_flag = global_data.param[PARAM_AEC] > 0;
-	uint16_t aec_agc_enabled = 0x0000;
-	if (aec_enable_flag) {
-		aec_agc_enabled |= (1 << 0);
-	}
-
-	bool agc_enable_flag = global_data.param[PARAM_AGC] > 0;
-	if (agc_enable_flag) {
-		aec_agc_enabled |= (1 << 1);
-	}
-
-	uint16_t desired_brightness = global_data.param[PARAM_BRIGHT];
-
-	uint16_t row_noise_correction = 0x0000; // default
-	uint16_t test_data = 0x0000; // default
-
-	if(FLOAT_AS_BOOL(global_data.param[PARAM_IMAGE_ROW_NOISE_CORR]) && !FLOAT_AS_BOOL(global_data.param[PARAM_IMAGE_TEST_PATTERN]))
-		row_noise_correction = 0x0101;
-	else
-		row_noise_correction = 0x0000;
-
-	if (FLOAT_AS_BOOL(global_data.param[PARAM_IMAGE_TEST_PATTERN]))
-		test_data = 0x3000; //enable vertical gray shade pattern
-	else
-		test_data = 0x0000;
-
-	uint16_t version = mt9v034_ReadReg16(MTV_CHIP_VERSION_REG);
-
-	if (version == 0x1324)
-	{
-		mt9v034_WriteReg16(MTV_CHIP_CONTROL_REG, new_control);
-
-		// Initialize frame control reg
-		mt9v034_WriteReg(0x72, 0x0000);
-
-		// Write reserved registers per Rev G datasheet table 8 recommendations
-		mt9v034_WriteReg16(0x13, 0x2D2E);
-		mt9v034_WriteReg16(0x20, 0x03C7);
-		mt9v034_WriteReg16(0x24, 0x001B);
-		mt9v034_WriteReg16(0x2B, 0x0003);
-		mt9v034_WriteReg16(0x2F, 0x0003);
-
-		/* Context A */
-		mt9v034_WriteReg16(MTV_WINDOW_WIDTH_REG_A, new_width_context_a);
-		mt9v034_WriteReg16(MTV_WINDOW_HEIGHT_REG_A, new_height_context_a);
-		mt9v034_WriteReg16(MTV_HOR_BLANKING_REG_A, new_hor_blanking_context_a);
-		mt9v034_WriteReg16(MTV_VER_BLANKING_REG_A, new_ver_blanking_context_a);
-		mt9v034_WriteReg16(MTV_READ_MODE_REG_A, new_readmode_context_a);
-		mt9v034_WriteReg16(MTV_COLUMN_START_REG_A, (MAX_IMAGE_WIDTH - new_width_context_a) / 2 + MINIMUM_COLUMN_START); // Set column/row start point for lower resolutions (center window)
-		mt9v034_WriteReg16(MTV_ROW_START_REG_A, (MAX_IMAGE_HEIGHT - new_height_context_a) / 2 + MINIMUM_ROW_START);
-		mt9v034_WriteReg16(MTV_COARSE_SW_1_REG_A, coarse_sw1);
-		mt9v034_WriteReg16(MTV_COARSE_SW_2_REG_A, coarse_sw2);
-		mt9v034_WriteReg16(MTV_COARSE_SW_CTRL_REG_A, shutter_width_ctrl);
-		mt9v034_WriteReg16(MTV_COARSE_SW_TOTAL_REG_A, total_shutter_width);
+    /* blanking settings */
+    uint16_t new_hor_blanking_context_a = 425 + MINIMUM_HORIZONTAL_BLANKING;// 709 is minimum value without distortions
+    uint16_t new_ver_blanking_context_a = 10; // this value is the first without image errors (dark lines)
+    uint16_t new_hor_blanking_context_b = MAX_IMAGE_WIDTH - new_width_context_b + MINIMUM_HORIZONTAL_BLANKING;
+    if (new_hor_blanking_context_b < 800) {
+        new_hor_blanking_context_b = 800;
+    }
+    uint16_t new_ver_blanking_context_b = 10;
 
 
-		/* Context B */
-		mt9v034_WriteReg16(MTV_WINDOW_WIDTH_REG_B, new_width_context_b);
-		mt9v034_WriteReg16(MTV_WINDOW_HEIGHT_REG_B, new_height_context_b);
-		mt9v034_WriteReg16(MTV_HOR_BLANKING_REG_B, new_hor_blanking_context_b);
-		mt9v034_WriteReg16(MTV_VER_BLANKING_REG_B, new_ver_blanking_context_b);
-		mt9v034_WriteReg16(MTV_READ_MODE_REG_B, new_readmode_context_b);
-		mt9v034_WriteReg16(MTV_COLUMN_START_REG_B, MINIMUM_COLUMN_START); // default
-		mt9v034_WriteReg16(MTV_ROW_START_REG_B, MINIMUM_ROW_START);
-		mt9v034_WriteReg16(MTV_COARSE_SW_1_REG_B, coarse_sw1);
-		mt9v034_WriteReg16(MTV_COARSE_SW_2_REG_B, coarse_sw2);
-		mt9v034_WriteReg16(MTV_COARSE_SW_CTRL_REG_B, shutter_width_ctrl);
-		mt9v034_WriteReg16(MTV_COARSE_SW_TOTAL_REG_B, total_shutter_width);
+    /* Read Mode
+     *
+     * bits           | ... | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+     * -------------------------------------------------------------------
+     * current values | ... |  0 | 1 | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 1 | 0 |
+     *
+     * (1:0) Row Bin
+     * (3:2) Column Bin
+     * (9:8) Reserved
+     *
+     */
+    uint16_t new_readmode_context_a = 0x30A ; // row + col bin 4 enable, (9:8) default
+    uint16_t new_readmode_context_b = 0x305 ; // row bin 2 col bin 4 enable, (9:8) default
 
-		/* General Settings */
-		mt9v034_WriteReg16(MTV_ROW_NOISE_CORR_CTRL_REG, row_noise_correction);
-		mt9v034_WriteReg16(MTV_AEC_AGC_ENABLE_REG, aec_agc_enabled); // disable AEC/AGC for both contexts
-		mt9v034_WriteReg16(MTV_HDR_ENABLE_REG, hdr_enabled); // disable HDR on both contexts
-		mt9v034_WriteReg16(MTV_MIN_EXPOSURE_REG, min_exposure);
-		mt9v034_WriteReg16(MTV_MAX_EXPOSURE_REG, max_exposure);
-		mt9v034_WriteReg16(MTV_MAX_GAIN_REG, max_gain);
-		mt9v034_WriteReg16(MTV_AGC_AEC_PIXEL_COUNT_REG, pixel_count);
-		mt9v034_WriteReg16(MTV_AGC_AEC_DESIRED_BIN_REG, desired_brightness);
-		mt9v034_WriteReg16(MTV_ADC_RES_CTRL_REG, resolution_ctrl); // here is the way to regulate darkness :)
+    /*
+     * Settings for both context:
+     *
+     * Exposure time should not affect frame time
+     * so we set max on 64 (lines) = 0x40
+     */
+    uint16_t min_exposure = 0x0001; // default
+    uint16_t pixel_count = 4096; //64x64 take all pixels to estimate exposure time // VALID RANGE: 1-65535
+    uint16_t shutter_width_ctrl = 0x0164; // default from context A
+    uint16_t aec_update_freq = 0x02; // default Number of frames to skip between changes in AEC VALID RANGE: 0-15
+    uint16_t aec_low_pass = 0x01; // default VALID RANGE: 0-2
+    uint16_t agc_update_freq = 0x02; // default Number of frames to skip between changes in AGC VALID RANGE: 0-15
+    uint16_t agc_low_pass = 0x02; // default VALID RANGE: 0-2
 
-		mt9v034_WriteReg16(MTV_DIGITAL_TEST_REG, test_data);//enable test pattern
+    uint16_t resolution_ctrl = 0x0303; // 12 bit adc for low light
+    uint16_t max_gain = global_data.param[PARAM_GAIN_MAX];
+    uint16_t max_exposure = global_data.param[PARAM_EXPOSURE_MAX];
+    uint16_t coarse_sw1 = global_data.param[PARAM_SHTR_W_1];
+    uint16_t coarse_sw2 = global_data.param[PARAM_SHTR_W_2];
+    uint16_t total_shutter_width = global_data.param[PARAM_SHTR_W_TOT];
+    uint16_t hdr_enabled = 0x0000;
+    bool hdr_enable_flag = global_data.param[PARAM_HDR] > 0;
+    if (hdr_enable_flag) {
+        hdr_enabled = 0x0100;
+    }
 
-		mt9v034_WriteReg16(MTV_AEC_UPDATE_REG,aec_update_freq);
-		mt9v034_WriteReg16(MTV_AEC_LOWPASS_REG,aec_low_pass);
-		mt9v034_WriteReg16(MTV_AGC_UPDATE_REG,agc_update_freq);
-		mt9v034_WriteReg16(MTV_AGC_LOWPASS_REG,agc_low_pass);
+    bool aec_enable_flag = global_data.param[PARAM_AEC] > 0;
+    uint16_t aec_agc_enabled = 0x0000;
+    if (aec_enable_flag) {
+        aec_agc_enabled |= (1 << 0);
+    }
 
-		/* Reset */
-		mt9v034_WriteReg16(MTV_SOFT_RESET_REG, 0x01);
-	}
+    bool agc_enable_flag = global_data.param[PARAM_AGC] > 0;
+    if (agc_enable_flag) {
+        aec_agc_enabled |= (1 << 1);
+    }
+
+    uint16_t desired_brightness = global_data.param[PARAM_BRIGHT];
+
+    uint16_t row_noise_correction = 0x0000; // default
+    uint16_t test_data = 0x0000; // default
+
+    if(FLOAT_AS_BOOL(global_data.param[PARAM_IMAGE_ROW_NOISE_CORR]) && !FLOAT_AS_BOOL(global_data.param[PARAM_IMAGE_TEST_PATTERN]))
+        row_noise_correction = 0x0101;
+    else
+        row_noise_correction = 0x0000;
+
+    if (FLOAT_AS_BOOL(global_data.param[PARAM_IMAGE_TEST_PATTERN]))
+        test_data = 0x3000; //enable vertical gray shade pattern
+    else
+        test_data = 0x0000;
+
+    uint16_t version = mt9v034_ReadReg16(MTV_CHIP_VERSION_REG);
+
+    if (version == 0x1324)
+    {
+        mt9v034_WriteReg16(MTV_CHIP_CONTROL_REG, new_control);
+
+        // Initialize frame control reg
+        mt9v034_WriteReg(0x72, 0x0000);
+
+        // Write reserved registers per Rev G datasheet table 8 recommendations
+        mt9v034_WriteReg16(0x13, 0x2D2E);
+        mt9v034_WriteReg16(0x20, 0x03C7);
+        mt9v034_WriteReg16(0x24, 0x001B);
+        mt9v034_WriteReg16(0x2B, 0x0003);
+        mt9v034_WriteReg16(0x2F, 0x0003);
+
+        /* Context A */
+        mt9v034_WriteReg16(MTV_WINDOW_WIDTH_REG_A, new_width_context_a);
+        mt9v034_WriteReg16(MTV_WINDOW_HEIGHT_REG_A, new_height_context_a);
+        mt9v034_WriteReg16(MTV_HOR_BLANKING_REG_A, new_hor_blanking_context_a);
+        mt9v034_WriteReg16(MTV_VER_BLANKING_REG_A, new_ver_blanking_context_a);
+        mt9v034_WriteReg16(MTV_READ_MODE_REG_A, new_readmode_context_a);
+        mt9v034_WriteReg16(MTV_COLUMN_START_REG_A, (MAX_IMAGE_WIDTH - new_width_context_a) / 2 + MINIMUM_COLUMN_START); // Set column/row start point for lower resolutions (center window)
+        mt9v034_WriteReg16(MTV_ROW_START_REG_A, (MAX_IMAGE_HEIGHT - new_height_context_a) / 2 + MINIMUM_ROW_START);
+        mt9v034_WriteReg16(MTV_COARSE_SW_1_REG_A, coarse_sw1);
+        mt9v034_WriteReg16(MTV_COARSE_SW_2_REG_A, coarse_sw2);
+        mt9v034_WriteReg16(MTV_COARSE_SW_CTRL_REG_A, shutter_width_ctrl);
+        mt9v034_WriteReg16(MTV_COARSE_SW_TOTAL_REG_A, total_shutter_width);
+
+
+        /* Context B */
+        mt9v034_WriteReg16(MTV_WINDOW_WIDTH_REG_B, new_width_context_b);
+        mt9v034_WriteReg16(MTV_WINDOW_HEIGHT_REG_B, new_height_context_b);
+        mt9v034_WriteReg16(MTV_HOR_BLANKING_REG_B, new_hor_blanking_context_b);
+        mt9v034_WriteReg16(MTV_VER_BLANKING_REG_B, new_ver_blanking_context_b);
+        mt9v034_WriteReg16(MTV_READ_MODE_REG_B, new_readmode_context_b);
+        mt9v034_WriteReg16(MTV_COLUMN_START_REG_B, MINIMUM_COLUMN_START); // default
+        mt9v034_WriteReg16(MTV_ROW_START_REG_B, MINIMUM_ROW_START);
+        mt9v034_WriteReg16(MTV_COARSE_SW_1_REG_B, coarse_sw1);
+        mt9v034_WriteReg16(MTV_COARSE_SW_2_REG_B, coarse_sw2);
+        mt9v034_WriteReg16(MTV_COARSE_SW_CTRL_REG_B, shutter_width_ctrl);
+        mt9v034_WriteReg16(MTV_COARSE_SW_TOTAL_REG_B, total_shutter_width);
+
+        /* General Settings */
+        mt9v034_WriteReg16(MTV_ROW_NOISE_CORR_CTRL_REG, row_noise_correction);
+        mt9v034_WriteReg16(MTV_AEC_AGC_ENABLE_REG, aec_agc_enabled); // disable AEC/AGC for both contexts
+        mt9v034_WriteReg16(MTV_HDR_ENABLE_REG, hdr_enabled); // disable HDR on both contexts
+        mt9v034_WriteReg16(MTV_MIN_EXPOSURE_REG, min_exposure);
+        mt9v034_WriteReg16(MTV_MAX_EXPOSURE_REG, max_exposure);
+        mt9v034_WriteReg16(MTV_MAX_GAIN_REG, max_gain);
+        mt9v034_WriteReg16(MTV_AGC_AEC_PIXEL_COUNT_REG, pixel_count);
+        mt9v034_WriteReg16(MTV_AGC_AEC_DESIRED_BIN_REG, desired_brightness);
+        mt9v034_WriteReg16(MTV_ADC_RES_CTRL_REG, resolution_ctrl); // here is the way to regulate darkness :)
+
+        mt9v034_WriteReg16(MTV_DIGITAL_TEST_REG, test_data);//enable test pattern
+
+        mt9v034_WriteReg16(MTV_AEC_UPDATE_REG,aec_update_freq);
+        mt9v034_WriteReg16(MTV_AEC_LOWPASS_REG,aec_low_pass);
+        mt9v034_WriteReg16(MTV_AGC_UPDATE_REG,agc_update_freq);
+        mt9v034_WriteReg16(MTV_AGC_LOWPASS_REG,agc_low_pass);
+
+        /* Reset */
+        mt9v034_WriteReg16(MTV_SOFT_RESET_REG, 0x01);
+    }
 
 }
 
@@ -226,13 +226,13 @@ void mt9v034_context_configuration(void)
   */
 void mt9v034_set_context()
 {
-	uint16_t new_control;
-	if (FLOAT_AS_BOOL(global_data.param[PARAM_VIDEO_ONLY]))
-		new_control = 0x8188; // Context B
-	else
-		new_control = 0x0188; // Context A
+    uint16_t new_control;
+    if (FLOAT_AS_BOOL(global_data.param[PARAM_VIDEO_ONLY]))
+        new_control = 0x8188; // Context B
+    else
+        new_control = 0x0188; // Context A
 
-	mt9v034_WriteReg16(MTV_CHIP_CONTROL_REG, new_control);
+    mt9v034_WriteReg16(MTV_CHIP_CONTROL_REG, new_control);
 }
 
 /**
@@ -302,9 +302,9 @@ uint8_t mt9v034_WriteReg(uint16_t Addr, uint8_t Data)
   */
 uint8_t mt9v034_WriteReg16(uint16_t address, uint16_t Data)
 {
-	uint8_t result = mt9v034_WriteReg(address, (uint8_t)( Data >> 8)); // write upper byte
-	result |= mt9v034_WriteReg(0xF0, (uint8_t) Data); // write lower byte
-	return result;
+    uint8_t result = mt9v034_WriteReg(address, (uint8_t)( Data >> 8)); // write upper byte
+    result |= mt9v034_WriteReg(0xF0, (uint8_t) Data); // write lower byte
+    return result;
 }
 
 /**
@@ -402,7 +402,7 @@ uint8_t mt9v034_ReadReg(uint16_t Addr)
   */
 uint16_t mt9v034_ReadReg16(uint8_t address)
 {
-	uint16_t result = mt9v034_ReadReg(address) << 8; // read upper byte
-	result |= mt9v034_ReadReg(0xF0); // read lower byte
-	return result;
+    uint16_t result = mt9v034_ReadReg(address) << 8; // read upper byte
+    result |= mt9v034_ReadReg(0xF0); // read lower byte
+    return result;
 }

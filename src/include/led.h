@@ -39,25 +39,25 @@
 
 typedef enum
 {
-	LED_ACT = 0,	// Blue
-	LED_COM = 1, 	// Amber
-	LED_ERR = 2,	// Red
+    LED_ACT = 0,    // Blue
+    LED_COM = 1,    // Amber
+    LED_ERR = 2,    // Red
 } Led_TypeDef;
 
 
-#define LEDn						3
+#define LEDn                        3
 
-#define LED_ACTIVITY_PIN			GPIO_Pin_3
-#define LED_ACTIVITY_GPIO_PORT		GPIOE
-#define LED_ACTIVITY_GPIO_CLK		RCC_AHB1Periph_GPIOE
+#define LED_ACTIVITY_PIN            GPIO_Pin_3
+#define LED_ACTIVITY_GPIO_PORT      GPIOE
+#define LED_ACTIVITY_GPIO_CLK       RCC_AHB1Periph_GPIOE
 
-#define LED_BOOTLOADER_PIN			GPIO_Pin_2
-#define LED_BOOTLOADER_GPIO_PORT	GPIOE
-#define LED_BOOTLOADER_GPIO_CLK		RCC_AHB1Periph_GPIOE
+#define LED_BOOTLOADER_PIN          GPIO_Pin_2
+#define LED_BOOTLOADER_GPIO_PORT    GPIOE
+#define LED_BOOTLOADER_GPIO_CLK     RCC_AHB1Periph_GPIOE
 
-#define LED_TEST_PIN				GPIO_Pin_7
-#define LED_TEST_GPIO_PORT			GPIOE
-#define LED_TEST_GPIO_CLK			RCC_AHB1Periph_GPIOE
+#define LED_TEST_PIN                GPIO_Pin_7
+#define LED_TEST_GPIO_PORT          GPIOE
+#define LED_TEST_GPIO_CLK           RCC_AHB1Periph_GPIOE
 
 
 void LEDInit(Led_TypeDef Led);

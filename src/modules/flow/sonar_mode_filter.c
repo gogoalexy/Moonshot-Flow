@@ -44,38 +44,38 @@ static unsigned insert_index = 0;
 
 static void sonar_bubble_sort(float in_out_sonar_values[], unsigned n)
 {
-	float t;
+    float t;
 
-	for (unsigned i = 0; i < (n - 1); i++) {
-		for (unsigned j = 0; j < (n - i - 1); j++) {
-			if (in_out_sonar_values[j] > in_out_sonar_values[j+1]) {
-				/* swap two values */
-				t = in_out_sonar_values[j];
-				in_out_sonar_values[j] = in_out_sonar_values[j + 1];
-				in_out_sonar_values[j + 1] = t;
-			}
-		}
-	}
+    for (unsigned i = 0; i < (n - 1); i++) {
+        for (unsigned j = 0; j < (n - i - 1); j++) {
+            if (in_out_sonar_values[j] > in_out_sonar_values[j+1]) {
+                /* swap two values */
+                t = in_out_sonar_values[j];
+                in_out_sonar_values[j] = in_out_sonar_values[j + 1];
+                in_out_sonar_values[j + 1] = t;
+            }
+        }
+    }
 }
 
 float insert_sonar_value_and_get_mode_value(float insert)
 {
-	const unsigned sonar_count = sizeof(sonar_values) / sizeof(sonar_values[0]);
+    const unsigned sonar_count = sizeof(sonar_values) / sizeof(sonar_values[0]);
 
-	sonar_values[insert_index] = insert;
-	insert_index++;
-	if (insert_index == sonar_count) {
-		insert_index = 0;
-	}
+    sonar_values[insert_index] = insert;
+    insert_index++;
+    if (insert_index == sonar_count) {
+        insert_index = 0;
+    }
 
-	/* sort and return mode */
+    /* sort and return mode */
 
-	/* copy ring buffer */
-	float sonar_temp[sonar_count];
-	memcpy(sonar_temp, sonar_values, sizeof(sonar_values));
+    /* copy ring buffer */
+    float sonar_temp[sonar_count];
+    memcpy(sonar_temp, sonar_values, sizeof(sonar_values));
 
-	sonar_bubble_sort(sonar_temp, sonar_count);
+    sonar_bubble_sort(sonar_temp, sonar_count);
 
-	/* the center element represents the mode after sorting */
-	return sonar_temp[sonar_count / 2];
+    /* the center element represents the mode after sorting */
+    return sonar_temp[sonar_count / 2];
 }

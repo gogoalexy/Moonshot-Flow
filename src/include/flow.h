@@ -40,7 +40,7 @@
  * @brief Computes pixel flow from image1 to image2
  */
 uint8_t compute_flow(uint8_t *image1, uint8_t *image2, float x_rate, float y_rate, float z_rate,
-		float *histflowx, float *histflowy);
+        float *histflowx, float *histflowy);
 
 uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, float y_rate, float z_rate, float *histflowx, float *histflowy, int8_t *fullflow);
 

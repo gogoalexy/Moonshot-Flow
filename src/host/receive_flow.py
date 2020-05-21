@@ -46,13 +46,14 @@ while(True):
                 canvas = cv2.line(canvas, (x, y), (x+flow[2*index], y+flow[2*index+1]), color=(180, 250, 180))
                 index += 1
 
-        if localcounter == 10:
+        if localcounter >= 10:
             tik.stop()
             fps = tik.fps()
             tik.reset()
             tik.start()
             localcounter = 0
 
+        print(fps)
         cv2.putText(canvas, str(int(fps)), (20, 20), cv2.FONT_HERSHEY_PLAIN, 0.8, (0, 150, 0))
         canvas = cv2.resize(canvas, (512, 512))
         cv2.imshow('PX4FLOW', canvas)
@@ -60,7 +61,7 @@ while(True):
             break
 
     except:
-        print("err")
+        print("packet lost")
         continue
 
 

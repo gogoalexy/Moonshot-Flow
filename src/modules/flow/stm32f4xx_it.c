@@ -135,7 +135,7 @@ void PendSV_Handler(void)
   */
 void SysTick_Handler(void)
 {
-	timer_update();
+    timer_update();
 }
 
 /******************************************************************************/
@@ -152,7 +152,7 @@ void SysTick_Handler(void)
   */
 void OTG_FS_IRQHandler(void)
 {
-	USBD_OTG_ISR_Handler (&USB_OTG_dev);
+    USBD_OTG_ISR_Handler (&USB_OTG_dev);
 }
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

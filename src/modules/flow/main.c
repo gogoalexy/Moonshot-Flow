@@ -371,6 +371,7 @@ int main(void)
 		}
 
 		/* calibration routine */
+        //FULL_IMAGE_SIZE=188*120
 		if(FLOAT_AS_BOOL(global_data.param[PARAM_VIDEO_ONLY]))
 		{
 			while(FLOAT_AS_BOOL(global_data.param[PARAM_VIDEO_ONLY]))

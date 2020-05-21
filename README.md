@@ -33,4 +33,7 @@ By default the px4flow-v1_default is uploaded; to upload a different version, ru
 ```
 Where `<target>` is one of the px4flow targets listed by `make help`.
 
+### Attention
+Here we use a non-standard mavlink protocol which supports signed data chunks transmission. Only a minor modification is made based on mavlink 1.0.12 and currently it is OK to use standard protocol. We still suggest you to build a costume pymavlink module from the source in the repository.
+
 __Note:__ For archlinux, the first line in the file `Flow/src/lib/uavcan/libuavcan/dsdl_compiler/libuavcan_dsdlc` should be modified as `#!/usr/bin/env python2` and make sure the whole program use python2 not 3.

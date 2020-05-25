@@ -509,9 +509,9 @@ main (void)
 		uint16_t image_width_send;
 		uint16_t image_height_send;
 
-		image_size_send = 64 * 2;
-		image_width_send = 8 * 2;
-		image_height_send = 8;
+		image_size_send = 256 * 2;
+		image_width_send = 16 * 2;
+		image_height_send = 16;
 
 
 		//MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN=253

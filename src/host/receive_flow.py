@@ -23,7 +23,7 @@ def retrieveFlow():
         else:
             frame = frame + subframe.data
 
-    return np.array(frame[:128], dtype=np.int8)
+    return np.array(frame[:512], dtype=np.int8)
 
 
 
@@ -41,12 +41,12 @@ while(True):
         flow = retrieveFlow()
         index = 0
         tik.update()
-        for y in range(256, 16, -32):
-            for x in range(16, 256, 32):
+        for y in range(256, 8, -16):
+            for x in range(8, 256, 16):
                 canvas = cv2.line(canvas, (x, y), (x+flow[2*index], y+flow[2*index+1]), color=(180, 250, 180))
                 index += 1
 
-        if localcounter >= 10:
+        if localcounter >= 20:
             tik.stop()
             fps = tik.fps()
             tik.reset()

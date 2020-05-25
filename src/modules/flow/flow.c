@@ -52,7 +52,7 @@
 #define FRAME_SIZE  global_data.param[PARAM_IMAGE_WIDTH]
 #define SEARCH_SIZE global_data.param[PARAM_MAX_FLOW_PIXEL] // maximum offset to search
 #define TILE_SIZE   8                                       // x & y tile size
-#define NUM_BLOCKS  8                                     // x & y number of tiles to check
+#define NUM_BLOCKS  16                                     // x & y number of tiles to check
 
 #define sign(x) (( x > 0 ) - ( x < 0 ))
 
@@ -760,7 +760,7 @@ uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, 
     const int16_t winmin = -SEARCH_SIZE;
     const int16_t winmax = SEARCH_SIZE;
     //const uint16_t hist_size = 2*(winmax-winmin+1)+1;
-   const uint16_t flow_size = 8*8*2;
+   const uint16_t flow_size = 16*16*2;
 
     /* variables */
     uint16_t pixLo = SEARCH_SIZE + 1;
@@ -768,11 +768,7 @@ uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, 
     uint16_t pixStep = (pixHi - pixLo) / NUM_BLOCKS + 1;
     uint16_t i, j;
     uint32_t acc[8];           // subpixels
-    //uint16_t histx[hist_size]; // counter for x shift
-    //uint16_t histy[hist_size]; // counter for y shift
-    //int8_t  dirsx[64];         // shift directions in x
-    //int8_t  dirsy[64];         // shift directions in y
-    //uint8_t  subdirs[64];      // shift directions of best subpixels
+
     float meanflowx = 0.0f;
     float meanflowy = 0.0f;
     uint16_t meancount = 0;
@@ -853,32 +849,6 @@ uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, 
         }
     }
 
-    /* create flow image if needed (image1 is not needed anymore)
-     * -> can be used for debugging purpose
-     */
-
-   flow_index = 0;
-   int16_t px = 0;
-   int16_t py = 0;
-    if (FLOAT_AS_BOOL(global_data.param[PARAM_USB_SEND_VIDEO]))//&& global_data.param[PARAM_VIDEO_USB_MODE] == FLOW_VIDEO)
-    {
-        for (j = pixLo; j < pixHi; j += pixStep)
-        {
-            for (i = pixLo; i < pixHi; i += pixStep)
-            {
-
-            image1[j * ((uint16_t) global_data.param[PARAM_IMAGE_WIDTH]) + i] = 100;
-            px = i+full_flow[2*flow_index];
-            py = j+full_flow[2*flow_index+1];
-            if(px<64 && py<64)
-               {
-                image1[py * ((uint16_t) global_data.param[PARAM_IMAGE_WIDTH]) + px] = 255;
-               }
-            flow_index++;
-
-            }
-        }
-    }
 
     /* calculate quality */
     uint8_t qual = (uint8_t)(meancount * 255 / (NUM_BLOCKS*NUM_BLOCKS));

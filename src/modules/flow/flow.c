@@ -50,9 +50,9 @@
 #include "core_cm4_simd.h"
 
 #define FRAME_SIZE  global_data.param[PARAM_IMAGE_WIDTH]
-#define SEARCH_SIZE global_data.param[PARAM_MAX_FLOW_PIXEL] // maximum offset to search
+#define SEARCH_SIZE global_data.param[PARAM_MAX_FLOW_PIXEL] // maximum offset to search 8
 #define TILE_SIZE   8                                       // x & y tile size
-#define NUM_BLOCKS  16                                     // x & y number of tiles to check
+#define NUM_BLOCKS  32                                     // x & y number of tiles to check
 
 #define sign(x) (( x > 0 ) - ( x < 0 ))
 
@@ -759,13 +759,12 @@ uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, 
     /* constants */
     const int16_t winmin = -SEARCH_SIZE;
     const int16_t winmax = SEARCH_SIZE;
-    //const uint16_t hist_size = 2*(winmax-winmin+1)+1;
-   const uint16_t flow_size = 16*16*2;
+    const uint16_t flow_size = 32*32*2;
 
     /* variables */
     uint16_t pixLo = SEARCH_SIZE + 1;
     uint16_t pixHi = FRAME_SIZE - (SEARCH_SIZE + 1);
-    uint16_t pixStep = (pixHi - pixLo) / NUM_BLOCKS + 1;
+    uint16_t pixStep = (pixHi - pixLo) / NUM_BLOCKS;
     uint16_t i, j;
     uint32_t acc[8];           // subpixels
 
@@ -778,7 +777,7 @@ uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, 
 
     /* iterate over all patterns
      */
-   uint8_t flow_index = 0;
+   uint16_t flow_index = 0;
     for (j = pixLo; j < pixHi; j += pixStep)
     {
         for (i = pixLo; i < pixHi; i += pixStep, flow_index++)

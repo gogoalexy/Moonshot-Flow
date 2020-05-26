@@ -23,7 +23,7 @@ def retrieveFlow():
         else:
             frame = frame + subframe.data
 
-    return np.array(frame[:512], dtype=np.int8)
+    return np.array(frame[:2048], dtype=np.int8)
 
 
 
@@ -36,14 +36,14 @@ fps = 0
 localcounter = 0
 while(True):
     localcounter += 1
-    canvas = np.zeros((256, 256, 3))
+    canvas = np.zeros((512, 512, 3))
     try:
         flow = retrieveFlow()
         index = 0
         tik.update()
-        for y in range(256, 8, -16):
-            for x in range(8, 256, 16):
-                canvas = cv2.line(canvas, (x, y), (x+flow[2*index], y+flow[2*index+1]), color=(180, 250, 180))
+        for y in range(512, 8, -16):
+            for x in range(8, 512, 16):
+                canvas = cv2.line(canvas, (x, y), (x+flow[2*index], y+flow[2*index+1]), color=(100, 250, 100))
                 index += 1
 
         if localcounter >= 20:
@@ -55,7 +55,6 @@ while(True):
 
         print(fps)
         cv2.putText(canvas, str(int(fps)), (20, 20), cv2.FONT_HERSHEY_PLAIN, 0.8, (0, 150, 0))
-        canvas = cv2.resize(canvas, (512, 512))
         cv2.imshow('PX4FLOW', canvas)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break

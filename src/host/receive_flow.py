@@ -25,43 +25,66 @@ def retrieveFlow():
 
     return np.array(frame[:2048], dtype=np.int8)
 
+def retrieveFrame():
+    handshake = flow_module.recv_match(type='DATA_TRANSMISSION_HANDSHAKE', blocking=True)
+    if handshake is None:
+        print('fail')
+        sys.exit(1)
 
+    frame = []
+    #print("{} packets; {} width".format(handshake.packets, handshake.width))
+    for capsule in range(handshake.packets):
+        subframe = flow_module.recv_match(type='ENCAPSULATED_DATA', blocking=True)
+        if subframe is None:
+            continue
+        else:
+            frame = frame + subframe.data
+
+    return np.array(frame[:12996], dtype=np.uint8).reshape((114, 114))
+
+
+
+
+flow_module = mavutil.mavlink_connection('/dev/ttyACM0')
+prvs = np.zeros((114, 114), np.uint8)
 
 tik = FPS().start()
-flow_module = mavutil.mavlink_connection('/dev/ttyACM0')
-#flow_module.wait_heartbeat()
-#print("Heartbeat from system (system %u component %u)" % (flow_module.target_system, flow_module.target_system))
-
 fps = 0
 localcounter = 0
 while(True):
     localcounter += 1
-    canvas = np.zeros((512, 512, 3))
     try:
         flow = retrieveFlow()
-        index = 0
+        curr = retrieveFrame()
         tik.update()
-        for y in range(512, 8, -16):
-            for x in range(8, 512, 16):
-                canvas = cv2.line(canvas, (x, y), (x+flow[2*index], y+flow[2*index+1]), color=(100, 250, 100))
-                index += 1
-
-        if localcounter >= 20:
-            tik.stop()
-            fps = tik.fps()
-            tik.reset()
-            tik.start()
-            localcounter = 0
-
-        print(fps)
-        cv2.putText(canvas, str(int(fps)), (20, 20), cv2.FONT_HERSHEY_PLAIN, 0.8, (0, 150, 0))
-        cv2.imshow('PX4FLOW', canvas)
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            break
 
     except:
         print("packet lost")
         continue
+
+    fbFlow = cv2.calcOpticalFlowFarneback(prvs, curr, None, 0.5, 8, 15, 3, 5, 1.2, 0)
+
+    if localcounter >= 20:
+        tik.stop()
+        fps = tik.fps()
+        tik.reset()
+        tik.start()
+        localcounter = 0
+
+        print(fps)
+        smallshow = cv2.cvtColor(prvs, cv2.COLOR_GRAY2BGR)
+        show = cv2.resize(smallshow, (684, 684), interpolation=cv2.INTER_LINEAR)
+        index = 0
+        for y in range(113, 8, -3):
+            for x in range(9, 114, 3):
+                show = cv2.line(show, (x*6, y*6), (x*6+int(fbFlow[y][x][0]*6), y*6+int(fbFlow[y][x][1]*6)), color=(10, 250, 10))
+                show = cv2.line(show, (x*6, y*6), (x*6+flow[2*index]*6, y*6+flow[2*index+1]*6), color=(10, 10, 250))
+                index += 1
+        cv2.putText(show, str(int(fps)), (20, 20), cv2.FONT_HERSHEY_PLAIN, 0.8, (0, 150, 0))
+        cv2.imshow('PX4FLOW', show)
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+        prvs = curr
 
 
 cv2.destroyAllWindows()

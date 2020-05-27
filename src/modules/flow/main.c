@@ -130,8 +130,7 @@ bool send_lpos_now = true;
   * @param  None
   * @retval None
   */
-void
-timer_update_ms (void)
+void timer_update_ms (void)
 {
     boot_time_ms++;
 
@@ -190,8 +189,7 @@ timer_update_ms (void)
   * @param  None
   * @retval None
   */
-void
-timer_update (void)
+void timer_update (void)
 {
     boot_time10_us++;
 
@@ -207,20 +205,17 @@ timer_update (void)
 }
 
 
-uint32_t
-get_boot_time_ms (void)
+uint32_t get_boot_time_ms (void)
 {
     return boot_time_ms;
 }
 
-uint32_t
-get_boot_time_us (void)
+uint32_t get_boot_time_us (void)
 {
     return boot_time10_us * 10;	// *10 to return microseconds
 }
 
-void
-delay (unsigned msec)
+void delay (unsigned msec)
 {
     timer[TIMER_DELAY] = msec;
     while (timer[TIMER_DELAY] > 0)
@@ -237,8 +232,7 @@ buffer_reset (void)
 /**
   * @brief  Main function.
   */
-int
-main (void)
+int main (void)
 {
     __enable_irq ();
 
@@ -307,9 +301,6 @@ main (void)
     i2c_init ();
 
     /* sonar config */
-    float sonar_distance_filtered = 0.0f;	// distance in meter
-    float sonar_distance_raw = 0.0f;	// distance in meter
-    bool distance_valid = false;
     sonar_config ();
 
     /* reset/start timers */
@@ -319,33 +310,15 @@ main (void)
     timer[TIMER_PARAMS] = PARAMS_COUNT;
     timer[TIMER_IMAGE] = global_data.param[PARAM_VIDEO_RATE];
 
-    /* variables */
-    uint32_t counter = 0;
-    uint8_t qual = 0;
-
     /* bottom flow variables */
     float pixel_flow_x = 0.0f;
     float pixel_flow_y = 0.0f;
-    int valid_frame_count = 0;
 
-    static float accumulated_flow_x = 0;
-    static float accumulated_flow_y = 0;
-    static float accumulated_gyro_x = 0;
-    static float accumulated_gyro_y = 0;
-    static float accumulated_gyro_z = 0;
-    static uint16_t accumulated_framecount = 0;
-    static uint16_t accumulated_quality = 0;
-    static uint32_t integration_timespan = 0;
-    static uint32_t lasttime = 0;
-    uint32_t time_last_pub = 0;
 
     uavcan_start ();
     /* main loop */
     while (1)
       {
-	  PROBE_1 (false);
-	  uavcan_run ();
-	  PROBE_1 (true);
 	  /* reset flow buffers if needed */
 	  if (buffer_reset_needed)
 	    {
@@ -376,129 +349,21 @@ main (void)
 	      global_data.param[PARAM_IMAGE_WIDTH] *
 	      global_data.param[PARAM_IMAGE_HEIGHT];
 
-	  /* new gyroscope data */
-	  float x_rate_sensor, y_rate_sensor, z_rate_sensor;
-	  int16_t gyro_temp;
-	  gyro_read (&x_rate_sensor, &y_rate_sensor, &z_rate_sensor,
-		     &gyro_temp);
-
-	  /* gyroscope coordinate transformation */
-	  float x_rate = y_rate_sensor;	// change x and y rates
-	  float y_rate = -x_rate_sensor;
-	  float z_rate = z_rate_sensor;	// z is correct
-
-	  /* calculate focal_length in pixel */
-	  const float focal_length_px = (global_data.param[PARAM_FOCAL_LENGTH_MM]) / (4.0f * 6.0f) * 1000.0f;	//original focal lenght: 12mm pixelsize: 6um, binning 4 enabled
-
-	  /* get sonar data */
-	  distance_valid =
-	      sonar_read (&sonar_distance_filtered, &sonar_distance_raw);
-
-	  /* reset to zero for invalid distances */
-	  if (!distance_valid)
-	    {
-		sonar_distance_filtered = 0.0f;
-		sonar_distance_raw = 0.0f;
-	    }
 
 	  /* compute optical flow */
-	  if (FLOAT_EQ_INT (global_data.param[PARAM_SENSOR_POSITION], BOTTOM))
+	  if (FLOAT_EQ_INT (global_data.param[PARAM_SENSOR_POSITION], BOTTOM) && send_image_now)
 	    {
 		/* copy recent image to faster ram */
 		dma_copy_image_buffers (&current_image, &previous_image,
 					image_size, 1);
 
 		/* compute optical flow */
-		qual =
-		    compute_flow_direct_out (previous_image, current_image,
-					     x_rate, y_rate, z_rate,
-					     &pixel_flow_x, &pixel_flow_y,
-					     full_flow);
-
-		/*
-		 * real point P (X,Y,Z), image plane projection p (x,y,z), focal-length f, distance-to-scene Z
-		 * x / f = X / Z
-		 * y / f = Y / Z
-		 */
-
-		if (qual > 0)
-		  {
-		      valid_frame_count++;
-
-		      uint32_t deltatime = (get_boot_time_us () - lasttime);
-		      integration_timespan += deltatime;
-		      accumulated_flow_x += pixel_flow_y / focal_length_px * 1.0f;	//rad axis swapped to align x flow around y axis
-		      accumulated_flow_y += pixel_flow_x / focal_length_px * -1.0f;	//rad
-		      accumulated_gyro_x += x_rate * deltatime / 1000000.0f;	//rad
-		      accumulated_gyro_y += y_rate * deltatime / 1000000.0f;	//rad
-		      accumulated_gyro_z += z_rate * deltatime / 1000000.0f;	//rad
-		      accumulated_framecount++;
-		      accumulated_quality += qual;
-		  }
-
-
-		/* integrate velocity and output values only if distance is valid */
-
-		//update lasttime
-		lasttime = get_boot_time_us ();
+      compute_flow_direct_out (previous_image, current_image,
+					     &pixel_flow_x, &pixel_flow_y, full_flow);
 
 
 	    }
 
-	  counter++;
-
-	  if (FLOAT_EQ_INT (global_data.param[PARAM_SENSOR_POSITION], BOTTOM))
-	    {
-		/* send bottom flow if activated */
-
-		//update I2C transmitbuffer
-
-
-		//serial mavlink  + usb mavlink output throttled
-		uint32_t now = get_boot_time_us ();
-		uint32_t time_since_last_pub = now - time_last_pub;
-		if (time_since_last_pub >
-		    (1.0e6f / global_data.param[PARAM_BOTTOM_FLOW_PUB_RATE]))
-		  {
-		      time_last_pub = now;
-
-		      // send flow
-
-		      /* send approximate local position estimate without heading */
-
-
-		      integration_timespan = 0;
-		      accumulated_flow_x = 0;
-		      accumulated_flow_y = 0;
-		      accumulated_framecount = 0;
-		      accumulated_quality = 0;
-		      accumulated_gyro_x = 0;
-		      accumulated_gyro_y = 0;
-		      accumulated_gyro_z = 0;
-
-		      valid_frame_count = 0;
-
-		  }
-	    }
-
-	  /* forward flow from other sensors */
-
-
-	  /* send system state, receive commands */
-
-
-	  /* receive commands */
-	  if (receive_now)
-	    {
-		/* test every second */
-		communication_receive ();
-		communication_receive_usb ();
-		receive_now = false;
-	    }
-
-	  /* sending debug msgs and requested parameters */
-
-	  /* send local position estimate, for testing only, doesn't account for heading */
 
 	  /*  transmit raw 8-bit image */
 	  if (FLOAT_AS_BOOL (global_data.param[PARAM_USB_SEND_VIDEO])
@@ -542,11 +407,35 @@ main (void)
 		  }
 
 
+
+		image_size_send = 114*114;
+		image_width_send = 114;
+		image_height_send = 114;
+
+		mavlink_msg_data_transmission_handshake_send(
+					MAVLINK_COMM_2,
+					MAVLINK_DATA_STREAM_IMG_RAW8U,
+					image_size_send,
+					image_width_send,
+					image_height_send,
+					image_size_send / MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN + 1,
+					MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN,
+					100);
+		LEDToggle(LED_COM);
+      frame = 0;
+		for (frame = 0; frame < image_size_send / MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN + 1; frame++)
+		{
+			mavlink_msg_encapsulated_data_send(MAVLINK_COMM_2, frame, &((uint8_t *) current_image)[frame * MAVLINK_MSG_ENCAPSULATED_DATA_FIELD_DATA_LEN]);
+		}
+
+
 		send_image_now = false;
 	    }
-	  else if (!FLOAT_AS_BOOL (global_data.param[PARAM_USB_SEND_VIDEO]))
+	   else if (!FLOAT_AS_BOOL (global_data.param[PARAM_USB_SEND_VIDEO]))
 	    {
-		LEDOff (LED_COM);
+		  LEDOff (LED_COM);
 	    }
+
+
       }
 }

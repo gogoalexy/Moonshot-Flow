@@ -58,7 +58,7 @@
 
 uint8_t compute_flow(uint8_t *image1, uint8_t *image2, float x_rate, float y_rate, float z_rate, float *pixel_flow_x, float *pixel_flow_y);
 
-uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, float y_rate, float z_rate, float *pixel_flow_x, float *pixel_flow_y, int8_t *full_flow);
+uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float *pixel_flow_x, float *pixel_flow_y, int8_t *full_flow);
 
 // compliments of Adam Williams
 #define ABSDIFF(frame1, frame2) \
@@ -754,7 +754,7 @@ uint8_t compute_flow(uint8_t *image1, uint8_t *image2, float x_rate, float y_rat
 }
 
 
-uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float x_rate, float y_rate, float z_rate, float *pixel_flow_x, float *pixel_flow_y, int8_t *full_flow) {
+uint8_t compute_flow_direct_out(uint8_t *image1, uint8_t *image2, float *pixel_flow_x, float *pixel_flow_y, int8_t *full_flow) {
 
     /* constants */
     const int16_t winmin = -SEARCH_SIZE;
